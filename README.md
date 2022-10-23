@@ -6,8 +6,10 @@
  If you want to only use the editor, [you can download the launcher instead](https://redark-technology.itch.io/line-worlds)
  and you can also [watch this tutorial](https://www.youtube.com/watch?v=uw-Q1et8zEs) if you're confused on how to set it up
  
- I wasn't paid or anything so don't request me expensive features here, and also... 
- Please consider donating at [my Ko-Fi page](https://ko-fi.com/bunzhizendi) so I can keep continue making useful stuff for you guys :D
+ I wasn't paid or anything so don't request me expensive features here...
+ 
+ And also... please consider donating at [my Ko-Fi page](https://ko-fi.com/bunzhizendi) so I can keep continue making useful stuff for you guys :D
+ 
  Thank you for visiting this GitHub page <3
  ## TODO
  - Make UI Scalable
