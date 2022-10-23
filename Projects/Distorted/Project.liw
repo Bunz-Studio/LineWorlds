@@ -1,0 +1,641 @@
+info:
+  levelName: Distorted
+  description: Even more editor testing
+  authorName: Bunzhida
+  musicName: snooze
+  musicArtist: wotaku feat. 初音ミク
+  musicFile: audio.ogg
+  levelID: 4333390
+  authorID: 0
+  levelVersion: 1
+  gameVersion: LW0.7
+renderSettings:
+  backgroundColor: &o0
+    r: 0.784313738
+    g: 0.784313738
+    b: 0.784313738
+    a: 1
+  fog: false
+  fogDensity: 0.0299999993
+  fogColor: *o0
+lineInfo:
+  instanceID: 1
+  name: Player
+  tag: Player
+  groupIDs: []
+  transform:
+    position:
+      x: 0
+      y: 1
+      z: 0
+    rotation:
+      x: 0
+      y: 90
+      z: 0
+    scale: &o1
+      x: 1
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.0,"b":1.0,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedLine
+    data: '{"lineSpeed":12.0}'
+cameraInfo:
+  instanceID: 2
+  name: RuntimeCamera
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 0
+      y: -4
+      z: 0
+    rotation:
+      x: 20.0000019
+      y: 45
+      z: 0
+    scale: *o1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedCamera
+    data: '{"rotation":{"x":20.0,"y":45.0,"z":0.0},"offset":{"x":0.0,"y":-5.0,"z":0.0},"distance":0.0,"SmoothTime":1.0,"SmoothFactor":1.0,"needtime":1.0}'
+gameObjects:
+- instanceID: 2
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: &o2
+      x: 0
+      y: 0
+      z: 0
+    rotation: *o2
+    scale: &o3
+      x: 3
+      y: 1
+      z: 3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 3
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: *o2
+    rotation: *o2
+    scale: *o3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 4
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 4.31806517
+      y: 0
+      z: 0
+    rotation: *o2
+    scale: *o3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 5
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 12.39923
+      y: 0
+      z: 3.23595405
+    rotation: *o2
+    scale: &o4
+      x: 5
+      y: 1
+      z: 5
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 6
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 15.0694399
+      y: 0
+      z: 6.10704613
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 7
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 18.4771099
+      y: 0
+      z: 11.2396698
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 8
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 19.7949696
+      y: 0
+      z: 17.5973892
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 9
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 24.5932999
+      y: 0
+      z: 19.1683807
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 10
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 27.3715992
+      y: 0
+      z: 22.4503803
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 11
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 29.5240192
+      y: -1.90734909E-06
+      z: 24.7597809
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 12
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 34.8194809
+      y: -3.81469908E-06
+      z: 26.3645592
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 13
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 38.704071
+      y: -5.72204999E-06
+      z: 29.0045891
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 14
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 42.66576
+      y: -5.72204999E-06
+      z: 31.7847805
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 15
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 44.0294113
+      y: -5.72204999E-06
+      z: 39.5089493
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 16
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 48.7322998
+      y: -5.72204999E-06
+      z: 40.2751312
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 17
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 50.9937286
+      y: -1.90735295E-06
+      z: 43.9781799
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 18
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 54.5250816
+      y: -1.90735295E-06
+      z: 46.2547188
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 19
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 56.7081108
+      y: -1.90735295E-06
+      z: 50.0601006
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 20
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 57.4322319
+      y: 1.90734397E-06
+      z: 55.5313187
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 21
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 61.9114304
+      y: 5.7220409E-06
+      z: 57.7024193
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 22
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 64.1689377
+      y: 9.53673771E-06
+      z: 60.2901688
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 23
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 66.152977
+      y: 9.53673316E-06
+      z: 62.9873505
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 24
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 67.3815308
+      y: 9.53673316E-06
+      z: 66.6999512
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 25
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 69.9558716
+      y: 9.53673316E-06
+      z: 68.401268
+    rotation: *o2
+    scale: *o4
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 26
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 3.09765506
+      y: 1.016752
+      z: 0.140749097
+    rotation: &o5
+      x: 0
+      y: 45.0000038
+      z: 0
+    scale: &o6
+      x: 15
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":0,"TargetAngleRotation":{"x":20.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":5.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":5.0,"TargetRotationSmoothing":0.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 27
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 10.9469604
+      y: 0
+      z: 0
+    rotation: *o2
+    scale: *o3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 28
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 8.68429947
+      y: 0
+      z: 0
+    rotation: *o2
+    scale: *o3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 29
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 43.751091
+      y: 1.01674998
+      z: 40.0170708
+    rotation: *o5
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":45.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":0.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 30
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 57.134079
+      y: -33.6181412
+      z: 58.5075188
+    rotation: *o5
+    scale: &o7
+      x: 900
+      y: 1
+      z: 5
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 31
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 15.4375
+      y: -33.6180992
+      z: 31.5273094
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":0.0,"a":1.0}]}'
+- instanceID: 32
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 29.8389397
+      y: -33.6181412
+      z: 30.3276501
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 33
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 43.6545906
+      y: -33.6181412
+      z: 45.8246689
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 34
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 113.031898
+      y: -33.6181107
+      z: 110.674301
+    rotation: *o5
+    scale:
+      x: 900
+      y: 1
+      z: 70
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":0.0,"a":1.0}]}'
+- instanceID: 35
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 64.2337799
+      y: -33.6180992
+      z: 81.9092789
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 36
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 71.5140228
+      y: -33.6181107
+      z: 90.0212936
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":0.0,"a":1.0}]}'
+- instanceID: 37
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 52.4477501
+      y: -33.6181297
+      z: 77.8352737
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":0.0,"a":1.0}]}'
+- instanceID: 38
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 40.987381
+      y: -33.6181297
+      z: 62.7223282
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":0.0,"a":1.0}]}'
+- instanceID: 39
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 29.3169308
+      y: -33.6180992
+      z: 47.5038605
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":0.0,"a":1.0}]}'
+- instanceID: 40
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 16.3091698
+      y: -33.6181297
+      z: 16.7481098
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 41
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 80.1828003
+      y: -33.6181107
+      z: 88.0577774
+    rotation: *o5
+    scale: *o7
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'

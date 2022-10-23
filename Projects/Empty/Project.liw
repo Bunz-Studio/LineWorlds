@@ -1,0 +1,76 @@
+info:
+  levelName: Empty
+  description: ''
+  authorName: ''
+  musicName: Untitled
+  musicArtist: Unknown
+  musicFile: audio.ogg
+  levelID: 4333390
+  authorID: 3395370
+  levelVersion: 1
+  gameVersion: LW0.7
+renderSettings:
+  backgroundColor: &o0
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  fog: false
+  fogDensity: 0.0299999993
+  fogColor: *o0
+lineInfo:
+  instanceID: 1
+  name: Player
+  tag: Player
+  groupIDs: []
+  transform:
+    position: &o1
+      x: 0
+      y: 1
+      z: 0
+    rotation:
+      x: 0
+      y: 90
+      z: 0
+    scale: &o2
+      x: 1
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedLine
+    data: '{"lineSpeed":12.0}'
+cameraInfo:
+  instanceID: 2
+  name: RuntimeCamera
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: *o1
+    rotation:
+      x: 45.0000038
+      y: 60.0000038
+      z: 0
+    scale: *o2
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedCamera
+    data: '{"rotation":{"x":45.0,"y":60.0,"z":0.0},"offset":{"x":0.0,"y":0.0,"z":0.0},"distance":20.0,"SmoothTime":1.0,"SmoothFactor":1.0,"needtime":1.0}'
+gameObjects:
+- instanceID: 3
+  name: Ground
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: &o3
+      x: 0
+      y: 0
+      z: 0
+    rotation: *o3
+    scale:
+      x: 50
+      y: 1
+      z: 50
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'

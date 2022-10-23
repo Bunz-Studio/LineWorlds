@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4109636019554550338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4209968417951849665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a8592cfad507e42b0cb9d28c5e9913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerTypes: 2
+  TargetDistance: {x: -5, y: 7, z: -5}
+  TargetPivotOffset: {x: 0, y: 0, z: 0}
+  TargetSmoothing: 1
+  TargetRotationSmoothing: 1
+  ChangeTargetObject: 0
+  TargetObjectToSee: {fileID: 0}
+  HighJump: 500
+  TestLoopCount: 2
+  TargetSpeed: 25
+  DensityTo: 0.01
+  DensitySpeed: 5
+  ColorTo: {r: 1, g: 1, b: 1, a: 1}
+  ColorSpeed: 5
+  endLerp: 5
+  renderers: {fileID: 0}
+  materialChange: 0
+  targetMaterial: {fileID: 0}
+  meshColorTo: {r: 0, g: 0, b: 0, a: 1}
+  lerpSpeed: 5
+  meshByTag: 0
+  byTag: 
+  TargetObject: {fileID: 0}
+  SetTo: 0
+  Duration: 12.5
+  ShakeDuration: 0.3
+  ShakeStrength: 1
+  animaTarg: {fileID: 0}
+--- !u!1001 &467477845011681912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854345821858633297, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327993769412218553, guid: 73b88ba491074144e902e37dcf3ea25d,
+        type: 3}
+      propertyPath: m_Name
+      value: SpeedUp Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3081634794896666444, guid: 73b88ba491074144e902e37dcf3ea25d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 73b88ba491074144e902e37dcf3ea25d, type: 3}
+--- !u!1 &4209968417951849665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4327993769412218553, guid: 73b88ba491074144e902e37dcf3ea25d,
+    type: 3}
+  m_PrefabInstance: {fileID: 467477845011681912}
+  m_PrefabAsset: {fileID: 0}

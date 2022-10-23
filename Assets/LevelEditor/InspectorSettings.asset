@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf1b10b96aced44ab27f065c3598ae, type: 3}
+  m_Name: InspectorSettings
+  m_EditorClassIdentifier: 
+  settingsName: MainSettings
+  matches:
+  - extFieldInspect: {fileID: 8506194657672441471, guid: a684475c64f052743a905c2e3fba8a5d,
+      type: 3}
+    additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 3037188473436049659, guid: 3b578aa22b94ed541bfaed3a67bad83a,
+      type: 3}
+    additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 4328875440810580185, guid: 781dbe1d1e4eb4d46b71b824e46b014f,
+      type: 3}
+    additionalInspect: {fileID: 7066298679305352896, guid: 4593dad8c49d1884bb4b62ed21b16ac2,
+      type: 3}
+  - extFieldInspect: {fileID: 8496060319102938789, guid: 662b063906518344bbf49d4cf8ada3b1,
+      type: 3}
+    additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 1757104282373963909, guid: 064a453ca6af45c4fb77af4b2c78c471,
+      type: 3}
+    additionalInspect: {fileID: 0}
