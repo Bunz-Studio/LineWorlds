@@ -106,7 +106,7 @@ namespace ExternMaker
         public virtual bool AreValuesSimilar()
         {
             if (isStatic) return true;
-
+            
             if (values.Count < 1) return false;
             for (int i = 1; i < values.Count; i++)
             {
@@ -140,6 +140,7 @@ namespace ExternMaker
 
         public virtual object GetValue(object src = null)
         {
+            values = GetValues();
             src = src ?? source;
             return value;
         }

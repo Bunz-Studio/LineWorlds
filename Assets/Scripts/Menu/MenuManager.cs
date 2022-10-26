@@ -6,6 +6,7 @@ using ExternMaker;
 
 public class MenuManager : MonoBehaviour
 {
+    public static bool bootUp;
 	public static MenuManager instance;
     public ExtMonoUtility utility;
 
@@ -13,6 +14,8 @@ public class MenuManager : MonoBehaviour
     public Color backColor = Color.blue;
     public Color foreColor = Color.blue;
 
+    public GameObject[] panels;
+    public static int index;
     public List<LevelRequest> requests = new List<LevelRequest>();
 
     public List<GameObject> levelInstances = new List<GameObject>();
@@ -23,12 +26,40 @@ public class MenuManager : MonoBehaviour
     public MenuLevelViewer levelViewer;
     public int levelViewerIndex = 6;
 
+    public GameObject[] onlyStartupObject;
     public Text[] versionTexts;
 
     public static bool startupHandled;
+    
+    public void MoveTab(int index)
+    {
+        for (int i = 0; i < panels.Length; i++)
+        {
+            var b = i == index;
+            if (panels[i].activeSelf != b)
+            {
+                if (b)
+                    panels[i].GetComponent<UIAnimationControl>().FloatOpen();
+                else
+                    panels[i].GetComponent<UIAnimationControl>().FloatClose();
+            }
+        }
+        MenuManager.index = index;
+    }
 
     private void Start()
     {
+        if(bootUp)
+        {
+            foreach(var obj in onlyStartupObject)
+            {
+                obj.SetActive(false);
+            }
+        }
+        else
+        {
+            bootUp = true;
+        }
         var res = SimpleFileBrowser.FileBrowser.CheckPermission();
         if (res != SimpleFileBrowser.FileBrowser.Permission.Granted)
         {

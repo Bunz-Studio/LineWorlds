@@ -18,7 +18,24 @@ namespace ExternMaker
 
         public InspectMatch GetMatch(System.Type type)
         {
-            return matches.Find(val => val.extFieldInspect.type.FullName == type.FullName);
+            try
+            {
+                var m = matches.Find(val => val.extFieldInspect.type.FullName == type.FullName);
+                if (m != null) return m;
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                var s = matches.Find(val => type.IsSubclassOf(val.extFieldInspect.type));
+                return s;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

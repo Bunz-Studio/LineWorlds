@@ -128,7 +128,7 @@ namespace ExternMaker
             public string fieldName;
             public string fieldCustomText;
 
-            public CustomInspectField GetInstance(Type type, Transform self)
+            public CustomInspectField GetInstance(Type type, Transform self, int siblingOffset = 2)
             {
                 int i = 0;
                 var prop = new ExtProperty(type, fieldName);
@@ -142,13 +142,13 @@ namespace ExternMaker
                     {
                         var inspInst = Instantiate(insp.extFieldInspect.gameObject, ExtInspector.instance.publicTransform).GetComponent<ExtFieldInspect>();
                         inspInst.gameObject.SetActive(true);
-                        inspInst.transform.SetSiblingIndex(self.GetSiblingIndex() + 1 + i);
+                        inspInst.transform.SetSiblingIndex(self.GetSiblingIndex() + siblingOffset + i);
                         i++;
                         if (insp.additionalInspect != null)
                         {
                             var inspMenu = Instantiate(insp.additionalInspect, ExtInspector.instance.publicTransform);
                             inspMenu.SetActive(false);
-                            inspMenu.transform.SetSiblingIndex(self.GetSiblingIndex() + 1 + i);
+                            inspMenu.transform.SetSiblingIndex(self.GetSiblingIndex() + siblingOffset + i);
                             i++;
                             inspInst.SetAdditionalObject(inspMenu);
                         }

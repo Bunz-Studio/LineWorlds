@@ -1,10 +1,10 @@
 levelName: Empty
-description: ''
-authorName: ''
-musicName: Untitled
+description: An empty level to test some stuff, good for testing that require short loading time
+authorName: Line Worlds
+musicName: Default Music
 musicArtist: Unknown
 musicFile: audio.ogg
 levelID: 4333390
-authorID: 3395370
+authorID: 0
 levelVersion: 1
-gameVersion: LW0.7
+gameVersion: LW0.8

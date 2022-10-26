@@ -62,6 +62,7 @@ namespace ExternMaker
         public LevelManager levelManager;
         public LineMovement lineMovement;
         public ExtAudioManager audioManager;
+        public ExtEditorSettings editorSettings;
 
         public Transform globalParent;
 
@@ -128,6 +129,10 @@ namespace ExternMaker
             if (isPlaymodeOnly)
             {
                 PlayGame();
+            }
+            else
+            {
+                editorSettings.Apply();
             }
         }
 
@@ -300,6 +305,8 @@ namespace ExternMaker
                 lineMovement.DestroyAllTail();
                 lineMovement.isStarted = false;
                 tempLineState.ApplyToSource(lineMovement);
+                var scj = playmodeCamera.GetComponentInChildren<Kino.AnalogGlitch>();
+                if(scj != null) scj.scanLineJitter = 0;
             }
             playState = EditorPlayState.Stopped;
         }
@@ -339,6 +346,15 @@ namespace ExternMaker
                 trigger.GetComponent<MeshRenderer>().enabled = !to;
                 col.enabled = true;
                 if (to) trigger.FindObject();
+            }
+
+            foreach (var trigger in FindObjectsOfType<SerializableTrigger>())
+            {
+                trigger.enabled = to;
+                var col = trigger.GetComponent<Collider>();
+                col.enabled = false;
+                trigger.GetComponent<MeshRenderer>().enabled = !to;
+                col.enabled = true;
             }
 
             foreach (var trigger in FindObjectsOfType<LineWorldsMod.ModTrigger>())

@@ -41,28 +41,36 @@ namespace ExternMaker
 
             foreach(var directory in projectDirectories)
             {
-                var obj = Instantiate(directoryInstance, content);
-
-                var button = obj.GetComponent<Button>();
-                button.onClick.AddListener(() =>
+                var info = Path.Combine(directory, "ProjectInfo.liwf");
+                if (File.Exists(info))
                 {
-                    ExtProjectManager.instance.Open(directory);
-                    gameObject.SetActive(false);
-                    startup.gameObject.SetActive(false);
-                });
+                    var obj = Instantiate(directoryInstance, content);
+                    var button = obj.GetComponent<Button>();
+                    var decInfo = LiwSerializer.yamlDeserializer.Deserialize<LiwProjectInfo>(File.ReadAllText(info));
 
-                var deleteButton = obj.transform.Find("deleteButton");
-                var deleteComp = deleteButton.GetComponent<Button>();
-                deleteComp.onClick.AddListener(() =>
-                {
-                    ExtUtility.RecursiveDelete(new DirectoryInfo(directory));
-                    Destroy(obj);
-                    projectInstances.Remove(obj);
-                });
+                    button.onClick.AddListener(() =>
+                    {
+                        ExtProjectManager.instance.Open(directory);
+                        gameObject.SetActive(false);
+                        startup.gameObject.SetActive(false);
+                    });
 
-                var text = obj.GetComponentInChildren<Text>();
-                text.text = Path.GetFileName(directory);
-                projectInstances.Add(obj);
+                    var projectName = obj.transform.Find("ProjectName");
+                    var projectPath = obj.transform.Find("ProjectPath");
+                    var projectOwner = obj.transform.Find("ProjectOwner");
+                    projectName.GetComponent<Text>().text = decInfo.levelName;
+                    projectPath.GetComponent<Text>().text = directory;
+                    projectOwner.GetComponent<Text>().text = decInfo.authorName;
+                    var deleteButton = obj.transform.Find("DeleteButton");
+                    var deleteComp = deleteButton.GetComponent<Button>();
+                    deleteComp.onClick.AddListener(() =>
+                    {
+                        ExtUtility.RecursiveDelete(new DirectoryInfo(directory));
+                        Destroy(obj);
+                        projectInstances.Remove(obj);
+                    });
+                    projectInstances.Add(obj);
+                }
             }
         }
     }

@@ -10,7 +10,6 @@ public class WorldInterface : MonoBehaviour
     void Start()
     {
         CameraEditorMovement.OnCameraMove += OnCameraMove;
-        ExtGrid.instance.onCameraPostRender += OnRenderCam;
     }
 
     public void OnRenderCam()
@@ -53,6 +52,5 @@ public class WorldInterface : MonoBehaviour
     private void OnDestroy()
     {
         CameraEditorMovement.OnCameraMove -= OnCameraMove;
-        if(ExtGrid.instance != null) ExtGrid.instance.onCameraPostRender -= OnRenderCam;
     }
 }

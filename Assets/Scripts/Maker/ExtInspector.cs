@@ -40,19 +40,22 @@ namespace ExternMaker
         {
             p_instance = this;
         	var tr = typeof(GameObject);
-    		objectNameInput.propertyInfo = new ExtProperty(tr.GetProperty("name"));
-			objectNameInput.Initialize();
-			
-        	ExtCore.instance.OnObjectUpdate += UpdateInspectors;
-        	ExtCore.instance.OnActionUpdate += UpdateAction;
-        	ExtCore.instance.OnClearObject += ObjectClear;
-
-            foreach (var insp in inspectFields)
+            if (!ExtCore.instance.isPlaymodeOnly)
             {
-                insp.Initialize();
-            }
+                objectNameInput.propertyInfo = new ExtProperty(tr.GetProperty("name"));
+                objectNameInput.Initialize();
 
-            ObjectClear();
+                ExtCore.instance.OnObjectUpdate += UpdateInspectors;
+                ExtCore.instance.OnActionUpdate += UpdateAction;
+                ExtCore.instance.OnClearObject += ObjectClear;
+
+                foreach (var insp in inspectFields)
+                {
+                    insp.Initialize();
+                }
+
+                ObjectClear();
+            }
         }
         
         private void OnDestroy()

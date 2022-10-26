@@ -12,6 +12,8 @@ public class MenuLevelViewer : MonoBehaviour
     public Text musicName;
     public Text musicAuthor;
 
+    public int menuIndex = 4;
+
     public Transform replaysParent;
     public GameObject replayPrefab;
     public List<GameObject> replayPrefabs = new List<GameObject>();
@@ -58,6 +60,8 @@ public class MenuLevelViewer : MonoBehaviour
                 replayPrefabs.Add(instance);
             }
         }
+
+        manager.MoveTab(menuIndex);
 
         selectedProject = project;
         selectedProjectPath = path;

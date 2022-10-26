@@ -64,10 +64,11 @@ namespace ExternMaker
                 return cls;
             }
             inst.delayToFade = 3 * delayRate;
-            LeanTween.value(inst.instance, Color.green, Color.white, 1).setOnUpdate((Color val) =>
+            var tween = LeanTween.value(inst.instance, Color.green, Color.white, 1).setOnUpdate((Color val) =>
             {
                 inst.textUi.color = val;
             });
+            tween.uncancellable = true;
             return inst;
         }
 
@@ -139,15 +140,16 @@ namespace ExternMaker
             }
             else
             {
-                LeanTween.value(1, 0, 1).setOnUpdate((float val) =>
+                var tween = LeanTween.value(1, 0, 1).setOnUpdate((float val) =>
                 {
-                    canvasGroup.alpha = val;
+                    if(canvasGroup != null) canvasGroup.alpha = val;
                 }
                 ).setOnComplete(() =>
                 {
                     Object.DestroyImmediate(instance);
                 }
                 );
+                tween.uncancellable = true;
                 isDone = true;
             }
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,11 +22,6 @@ namespace ExternMaker.Serialization
 
         public virtual string Serialize()
         {
-            /*return JsonConvert.SerializeObject(this, Formatting.Indented, new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                DefaultValueHandling = DefaultValueHandling.Ignore
-            });*/
             return JsonUtility.ToJson(this);
         }
 
@@ -54,6 +50,15 @@ namespace ExternMaker.Serialization
 
     public static class Serializables
     {
+        public static ConverterMatch[] converters = {
+            new ConverterMatch(typeof(float), typeof(FloatConverter)),
+            new ConverterMatch(typeof(int), typeof(IntConverter)),
+            new ConverterMatch(typeof(string), typeof(StringConverter)),
+            new ConverterMatch(typeof(bool), typeof(BoolConverter)),
+            new ConverterMatch(typeof(Enum), typeof(EnumConverter)),
+            new ConverterMatch(typeof(GameObject), typeof(GameObjectConverter)),
+            new ConverterMatch(typeof(UnityEngine.Object), typeof(UnityObjectConverter))
+        };
         [Serializable]
         public class SerializedMesh : ExtSerializables
         {
@@ -161,7 +166,7 @@ namespace ExternMaker.Serialization
                             }
                             else
                             {
-                                ExtActionInspector.Log("Can't serialize a material: Doesn't have the property _Color", "Project Cacher", "Object: " + obj.name);
+                                // ExtActionInspector.Log("Can't serialize a material: Doesn't have the property _Color", "Project Cacher", "Object: " + obj.name);
                             }
                         }
                         catch
@@ -287,15 +292,7 @@ namespace ExternMaker.Serialization
         public class SerializedModTrigger : ExtSerializables
         {
             public string actualType;
-            public List<ModField> modFields = new List<ModField>();
-            public static ConverterMatch[] converters = {
-                new ConverterMatch(typeof(float), typeof(FloatConverter)),
-                new ConverterMatch(typeof(int), typeof(IntConverter)),
-                new ConverterMatch(typeof(string), typeof(StringConverter)),
-                new ConverterMatch(typeof(Enum), typeof(EnumConverter)),
-                new ConverterMatch(typeof(GameObject), typeof(GameObjectConverter)),
-                new ConverterMatch(typeof(UnityEngine.Object), typeof(UnityObjectConverter))
-            };
+            public List<UniversalField> modFields = new List<UniversalField>();
             public SerializedModTrigger()
             {
 
@@ -306,7 +303,7 @@ namespace ExternMaker.Serialization
                 actualType = trig.GetType().FullName;
                 foreach (var field in trig.GetType().GetFields())
                 {
-                    var cls = new ModField();
+                    var cls = new UniversalField();
                     cls.name = field.Name;
                     cls.type = field.FieldType.FullName;
                     try
@@ -315,7 +312,7 @@ namespace ExternMaker.Serialization
                         if (m == null)
                             cls.value = JsonUtility.ToJson(field.GetValue(trig));
                         else
-                            cls.value = ((ModFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(trig));
+                            cls.value = ((UniversalFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(trig));
                         modFields.Add(cls);
                     }
                     catch
@@ -347,7 +344,7 @@ namespace ExternMaker.Serialization
                                 fieldP.SetValue(trig, JsonConvert.DeserializeObject(field.value, fieldP.FieldType));
                             else
                             {
-                                var conv = (ModFieldConverter)Activator.CreateInstance(m.converter);
+                                var conv = (UniversalFieldConverter)Activator.CreateInstance(m.converter);
                                 var objV = conv.GetValidObject(field.value);
                                 if (objV != null)
                                 {
@@ -378,7 +375,7 @@ namespace ExternMaker.Serialization
                 actualType = trig.GetType().FullName;
                 foreach (var field in trig.GetType().GetFields())
                 {
-                    var cls = new ModField();
+                    var cls = new UniversalField();
                     cls.name = field.Name;
                     cls.type = field.FieldType.FullName;
                     try
@@ -387,7 +384,7 @@ namespace ExternMaker.Serialization
                         if (m == null)
                             cls.value = JsonUtility.ToJson(field.GetValue(trig));
                         else
-                            cls.value = ((ModFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(trig));
+                            cls.value = ((UniversalFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(trig));
                         modFields.Add(cls);
                     }
                     catch (Exception e)
@@ -399,7 +396,167 @@ namespace ExternMaker.Serialization
 
             public static ConverterMatch FindConverter(Type type)
             {
-                foreach(var match in converters)
+                foreach(var match in Serializables.converters)
+                {
+                    if (match.type == type) return match;
+                    if (type.IsSubclassOf(match.type)) return match;
+                }
+                return null;
+            }
+        }
+
+        [Serializable]
+        public class SerializedUniversalComponent : ExtSerializables
+        {
+            public string actualType;
+            public List<UniversalField> fields = new List<UniversalField>();
+
+            public SerializedUniversalComponent()
+            {
+
+            }
+
+            public SerializedUniversalComponent(Component component)
+            {
+                fields.Clear();
+                actualType = component.GetType().FullName;
+                foreach (var field in component.GetType().GetFields())
+                {
+                    if (field.GetCustomAttribute(typeof(IgnoreSavingStateAttribute)) != null) continue;
+
+                    var cls = new UniversalField();
+                    cls.name = field.Name;
+                    cls.type = field.FieldType.FullName;
+                    try
+                    {
+                        var m = FindConverter(field.FieldType);
+                        if (m == null)
+                            cls.value = JsonUtility.ToJson(field.GetValue(component));
+                        else
+                            cls.value = ((UniversalFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(component));
+                        fields.Add(cls);
+                    }
+                    catch
+                    {
+                        Debug.LogWarning("Can't serialize " + field.Name + " in " + actualType);
+                    }
+                }
+            }
+
+            public override bool IsObjectSupported(GameObject obj)
+            {
+                Type type = ExtCompiler.TryGetType(actualType);
+                if (type != null)
+                {
+                    var comp = obj.GetComponent(type);
+                    return comp != null;
+                }
+                return false;
+            }
+
+            public override void ApplyTo(GameObject obj, bool now = false)
+            {
+                var type = ExtCompiler.TryGetType(actualType);
+                if (type != null)
+                {
+                    var trig = obj.AddOrGetComponent(type);
+                    foreach (var field in fields)
+                    {
+                        var fieldP = type.GetField(field.name);
+                        try
+                        {
+                            var m = FindConverter(fieldP.FieldType);
+                            if (m == null)
+                                fieldP.SetValue(trig, JsonConvert.DeserializeObject(field.value, fieldP.FieldType));
+                            else
+                            {
+                                var conv = (UniversalFieldConverter)Activator.CreateInstance(m.converter);
+                                var objV = conv.GetValidObject(field.value);
+                                if (objV != null)
+                                {
+                                    fieldP.SetValue(trig, objV);
+                                }
+                                /*else
+                                {
+                                    ExtActionInspector.Log("Can't somehow find the type for " + fieldP.Name + " in " + actualType, "ExtDeserializer");
+                                }*/
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            ExtActionInspector.Log("Can't deserialize " + fieldP.Name + " in " + actualType + " => " + e.Message, "ExtDeserializer", e.StackTrace);
+                        }
+                    }
+                    obj.GetComponent<MeshCollider>().isTrigger = true;
+                }
+                else
+                {
+                    ExtActionInspector.Log("Failed to add component " + actualType + " to " + obj.name, "ExtModTrigger", "Type might not exist");
+                }
+            }
+
+            public override void TakeValues(GameObject obj)
+            {
+                fields.Clear();
+                Type type = ExtCompiler.TryGetType(actualType);
+                if (type == null)
+                {
+                    type = typeof(Component);
+                }
+                var trig = obj.GetComponent(type);
+                actualType = trig.GetType().FullName;
+                foreach (var field in trig.GetType().GetFields())
+                {
+                    if (field.GetCustomAttribute(typeof(IgnoreSavingStateAttribute)) != null) continue;
+
+                    var cls = new UniversalField();
+                    cls.name = field.Name;
+                    cls.type = field.FieldType.FullName;
+                    try
+                    {
+                        var m = FindConverter(field.FieldType);
+                        if (m == null)
+                            cls.value = JsonUtility.ToJson(field.GetValue(trig));
+                        else
+                            cls.value = ((UniversalFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(trig));
+                        fields.Add(cls);
+                    }
+                    catch (Exception e)
+                    {
+                        ExtActionInspector.Log("Can't serialize " + field.Name + " in " + actualType + " => " + e.Message, "ExtSerializer", e.StackTrace);
+                    }
+                }
+            }
+
+            public void TakeValuesFromComponent(Type type, object obj)
+            {
+                fields.Clear();
+                actualType = type.FullName;
+                foreach (var field in type.GetFields())
+                {
+                    if (field.GetCustomAttribute(typeof(IgnoreSavingStateAttribute)) != null) continue;
+                    var cls = new UniversalField();
+                    cls.name = field.Name;
+                    cls.type = field.FieldType.FullName;
+                    try
+                    {
+                        var m = FindConverter(field.FieldType);
+                        if (m == null)
+                            cls.value = JsonUtility.ToJson(field.GetValue(obj));
+                        else
+                            cls.value = ((UniversalFieldConverter)Activator.CreateInstance(m.converter)).GetJsonValue(field.GetValue(obj));
+                        fields.Add(cls);
+                    }
+                    catch (Exception e)
+                    {
+                        ExtActionInspector.Log("Can't serialize " + field.Name + " in " + actualType + " => " + e.Message, "ExtSerializer", e.StackTrace);
+                    }
+                }
+            }
+
+            public static ConverterMatch FindConverter(Type type)
+            {
+                foreach (var match in converters)
                 {
                     if (match.type == type) return match;
                     if (type.IsSubclassOf(match.type)) return match;
@@ -407,210 +564,7 @@ namespace ExternMaker.Serialization
                 return null;
             }
 
-            [Serializable]
-            public class ModField
-            {
-                public string name;
-                public string type;
-                public string value;
-            }
-
-            [Serializable]
-            public class ConverterMatch
-            {
-                public Type type;
-                public Type converter;
-
-                public ConverterMatch(Type type, Type converter)
-                {
-                    this.type = type;
-                    this.converter = converter;
-                }
-            }
-
-            public class ModFieldConverter
-            {
-                public virtual string type
-                {
-                    get
-                    {
-                        return null;
-                    }
-                }
-
-                public virtual string GetJsonValue(object obj)
-                {
-                    return null;
-                }
-
-                public virtual object GetValidObject(string json)
-                {
-                    return null;
-                }
-            }
-
-            public class StringConverter : ModFieldConverter
-            {
-                public override string type => "System.String";
-                public override string GetJsonValue(object obj)
-                {
-                    return JsonUtility.ToJson(new Wrapper { str = (string)obj });
-                }
-                public override object GetValidObject(string json)
-                {
-                    return JsonUtility.FromJson<Wrapper>(json).str;
-                }
-
-                [Serializable]
-                public class Wrapper
-                {
-                    public string str;
-                }
-            }
-
-            public class FloatConverter : ModFieldConverter
-            {
-                public override string type => "System.Single";
-                public override string GetJsonValue(object obj)
-                {
-                    return JsonUtility.ToJson(new Wrapper { num = (float)obj });
-                }
-                public override object GetValidObject(string json)
-                {
-                    return JsonUtility.FromJson<Wrapper>(json).num;
-                }
-
-                [Serializable]
-                public class Wrapper
-                {
-                    public float num;
-                }
-            }
-
-            public class IntConverter : ModFieldConverter
-            {
-                public override string type => "System.Single";
-                public override string GetJsonValue(object obj)
-                {
-                    return JsonUtility.ToJson(new Wrapper { num = (int)obj });
-                }
-                public override object GetValidObject(string json)
-                {
-                    return JsonUtility.FromJson<Wrapper>(json).num;
-                }
-
-                [Serializable]
-                public class Wrapper
-                {
-                    public int num;
-                }
-            }
-
-            public class EnumConverter : ModFieldConverter
-            {
-                public override string type => "System.Enum";
-                public override string GetJsonValue(object obj)
-                {
-                    return JsonUtility.ToJson(new Wrapper { type = obj.GetType().FullName, name = ((Enum)obj).ToString() });
-                }
-                public override object GetValidObject(string json)
-                {
-                    var cls = JsonUtility.FromJson<Wrapper>(json);
-                    return Enum.Parse(Type.GetType(cls.type), cls.name);
-                }
-
-                [Serializable]
-                public class Wrapper
-                {
-                    public string type;
-                    public string name;
-                }
-            }
-
-            public class GameObjectConverter : ModFieldConverter
-            {
-                public override string type => "UnityEngine.GameObject";
-                public override string GetJsonValue(object obj)
-                {
-                    try
-                    {
-                        if (obj != null)
-                        {
-                            var ext = ((GameObject)obj).GetComponent<ExtObject>().instanceID;
-                            return JsonUtility.ToJson(new Wrapper { instanceID = ext });
-                        }
-                        else
-                        {
-                            return JsonUtility.ToJson(new Wrapper { instanceID = -1 });
-                        }
-                    }
-                    catch
-                    {
-                        return JsonUtility.ToJson(new Wrapper { instanceID = -1 });
-                    }
-                }
-                public override object GetValidObject(string json)
-                {
-                    try
-                    {
-                        var cls = JsonUtility.FromJson<Wrapper>(json);
-                        if (cls.instanceID > -1)
-                        {
-                            return ExtCore.GetObject(cls.instanceID).gameObject;
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-                    catch
-                    {
-                        return null;
-                    }
-                }
-
-                [Serializable]
-                public class Wrapper
-                {
-                    public int instanceID;
-                }
-            }
-            public class UnityObjectConverter : ModFieldConverter
-            {
-                public override string type => "UnityEngine.Object";
-                public override string GetJsonValue(object obj)
-                {
-                    if (obj != null)
-                    {
-                        var ext = ((MonoBehaviour)obj).GetComponent<ExtObject>().instanceID;
-                        return JsonUtility.ToJson(new Wrapper { targetType = obj.GetType().FullName, instanceID = ext });
-                    }
-                    else
-                    {
-                        return JsonUtility.ToJson(new Wrapper { targetType = null, instanceID = -1 });
-                    }
-                }
-                public override object GetValidObject(string json)
-                {
-                    var cls = JsonUtility.FromJson<Wrapper>(json);
-                    var type = ExtCompiler.TryGetType(cls.targetType);
-                    if (cls.instanceID > -1)
-                    {
-                        return type == null ? null : ExtCore.GetObject(cls.instanceID).GetComponent(type);
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-
-                [Serializable]
-                public class Wrapper
-                {
-                    public string targetType;
-                    public int instanceID;
-                }
-            }
+            
         }
 
         [Serializable]
@@ -1109,6 +1063,230 @@ namespace ExternMaker.Serialization
             public override bool IsObjectSupported(GameObject obj)
             {
                 return obj.GetComponent<SpriteRenderer>() != null;
+            }
+        }
+
+        [Serializable]
+        public class UniversalField
+        {
+            public string name;
+            public string type;
+            public string value;
+        }
+
+        [Serializable]
+        public class ConverterMatch
+        {
+            public Type type;
+            public Type converter;
+
+            public ConverterMatch(Type type, Type converter)
+            {
+                this.type = type;
+                this.converter = converter;
+            }
+        }
+
+        public class UniversalFieldConverter
+        {
+            public virtual string type
+            {
+                get
+                {
+                    return null;
+                }
+            }
+
+            public virtual string GetJsonValue(object obj)
+            {
+                return null;
+            }
+
+            public virtual object GetValidObject(string json)
+            {
+                return null;
+            }
+        }
+
+        public class StringConverter : UniversalFieldConverter
+        {
+            public override string type => "System.String";
+            public override string GetJsonValue(object obj)
+            {
+                return JsonUtility.ToJson(new Wrapper { str = (string)obj });
+            }
+            public override object GetValidObject(string json)
+            {
+                return JsonUtility.FromJson<Wrapper>(json).str;
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public string str;
+            }
+        }
+
+        public class FloatConverter : UniversalFieldConverter
+        {
+            public override string type => "System.Single";
+            public override string GetJsonValue(object obj)
+            {
+                return JsonUtility.ToJson(new Wrapper { num = (float)obj });
+            }
+            public override object GetValidObject(string json)
+            {
+                return JsonUtility.FromJson<Wrapper>(json).num;
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public float num;
+            }
+        }
+
+        public class IntConverter : UniversalFieldConverter
+        {
+            public override string type => "System.Single";
+            public override string GetJsonValue(object obj)
+            {
+                return JsonUtility.ToJson(new Wrapper { num = (int)obj });
+            }
+            public override object GetValidObject(string json)
+            {
+                return JsonUtility.FromJson<Wrapper>(json).num;
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public int num;
+            }
+        }
+
+        public class BoolConverter : UniversalFieldConverter
+        {
+            public override string type => "System.Boolean";
+            public override string GetJsonValue(object obj)
+            {
+                return JsonUtility.ToJson(new Wrapper { val = (bool)obj });
+            }
+            public override object GetValidObject(string json)
+            {
+                return JsonUtility.FromJson<Wrapper>(json).val;
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public bool val;
+            }
+        }
+
+        public class EnumConverter : UniversalFieldConverter
+        {
+            public override string type => "System.Enum";
+            public override string GetJsonValue(object obj)
+            {
+                return JsonUtility.ToJson(new Wrapper { type = obj.GetType().FullName, name = ((Enum)obj).ToString() });
+            }
+            public override object GetValidObject(string json)
+            {
+                var cls = JsonUtility.FromJson<Wrapper>(json);
+                return Enum.Parse(Type.GetType(cls.type), cls.name);
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public string type;
+                public string name;
+            }
+        }
+
+        public class GameObjectConverter : UniversalFieldConverter
+        {
+            public override string type => "UnityEngine.GameObject";
+            public override string GetJsonValue(object obj)
+            {
+                try
+                {
+                    if (obj != null)
+                    {
+                        var ext = ((GameObject)obj).GetComponent<ExtObject>().instanceID;
+                        return JsonUtility.ToJson(new Wrapper { instanceID = ext });
+                    }
+                    else
+                    {
+                        return JsonUtility.ToJson(new Wrapper { instanceID = -1 });
+                    }
+                }
+                catch
+                {
+                    return JsonUtility.ToJson(new Wrapper { instanceID = -1 });
+                }
+            }
+            public override object GetValidObject(string json)
+            {
+                try
+                {
+                    var cls = JsonUtility.FromJson<Wrapper>(json);
+                    if (cls.instanceID > -1)
+                    {
+                        return ExtCore.GetObject(cls.instanceID).gameObject;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public int instanceID;
+            }
+        }
+        public class UnityObjectConverter : UniversalFieldConverter
+        {
+            public override string type => "UnityEngine.Object";
+            public override string GetJsonValue(object obj)
+            {
+                if (obj != null)
+                {
+                    var ext = ((MonoBehaviour)obj).GetComponent<ExtObject>().instanceID;
+                    return JsonUtility.ToJson(new Wrapper { targetType = obj.GetType().FullName, instanceID = ext });
+                }
+                else
+                {
+                    return JsonUtility.ToJson(new Wrapper { targetType = null, instanceID = -1 });
+                }
+            }
+            public override object GetValidObject(string json)
+            {
+                var cls = JsonUtility.FromJson<Wrapper>(json);
+                var type = ExtCompiler.TryGetType(cls.targetType);
+                if (cls.instanceID > -1)
+                {
+                    return type == null ? null : ExtCore.GetObject(cls.instanceID).GetComponent(type);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+            [Serializable]
+            public class Wrapper
+            {
+                public string targetType;
+                public int instanceID;
             }
         }
     }

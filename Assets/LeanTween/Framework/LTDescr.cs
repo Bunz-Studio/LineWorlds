@@ -33,6 +33,7 @@ using UnityEngine;
 public class LTDescr
 {
 	public bool toggle;
+    public bool uncancellable;
 	public bool useEstimatedTime;
 	public bool useFrames;
 	public bool useManualTime;

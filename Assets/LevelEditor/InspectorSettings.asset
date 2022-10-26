@@ -30,3 +30,19 @@ MonoBehaviour:
   - extFieldInspect: {fileID: 1757104282373963909, guid: 064a453ca6af45c4fb77af4b2c78c471,
       type: 3}
     additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 6669138052503177409, guid: 7545f64faa03f6a4e9e7a47a04de87dd,
+      type: 3}
+    additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 3833076375844976101, guid: 59f1ad2eedee9ca4bb470bcedd7019b0,
+      type: 3}
+    additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 4010691823300684234, guid: c639505c85080914589032a3bbad04bf,
+      type: 3}
+    additionalInspect: {fileID: 102011424233596644, guid: 27dde5242141ff44f9768534acf29c15,
+      type: 3}
+  - extFieldInspect: {fileID: 2645789500679076110, guid: 0a12c40b8a075084fbacef80684905e2,
+      type: 3}
+    additionalInspect: {fileID: 0}
+  - extFieldInspect: {fileID: 4422879372224962860, guid: 4ebb364864c36c4409c305f700b57cbb,
+      type: 3}
+    additionalInspect: {fileID: 0}

@@ -45,6 +45,13 @@ namespace ExternMaker
             }
         }
 
+        public override void SetAdditionalObject(GameObject obj)
+        {
+            base.SetAdditionalObject(obj);
+            dropdownMenu = obj;
+            itemParent = obj.transform.Find("Viewport").Find("Content");
+        }
+
         public void FinishEdit()
         {
             ApplyInputs(true);
@@ -54,19 +61,26 @@ namespace ExternMaker
         {
             if (source != null || isStatic)
             {
-                var o = GetValue();
-                var ind = triggerTypesIndex.ContainsKey(o) ? triggerTypesIndex[o] : -1;
-                base.ApplyTemp();
-                if (ind > -1)
+                var o = GetValues();
+                if (AreValuesSimilar())
                 {
-                    var t = Enum.GetName(enumType, o);
+                    var ind = triggerTypesIndex.ContainsKey(o[0]) ? triggerTypesIndex[o[0]] : -1;
+                    base.ApplyTemp();
+                    if (ind > -1)
+                    {
+                        var t = Enum.GetName(enumType, o[0]);
 
-                    selectedIndex = ind;
-                    fieldShow.text = ExtInsModTrigger.AddSpacesToSentence(t.ToString(), true);
+                        selectedIndex = ind;
+                        fieldShow.text = ExtInsModTrigger.AddSpacesToSentence(t.ToString(), true);
+                    }
+                    else
+                    {
+                        fieldShow.text = "(Invalid Enum)";
+                    }
                 }
                 else
                 {
-                    fieldShow.text = "(Invalid Enum)";
+                    fieldShow.text = "-";
                 }
             }
         }

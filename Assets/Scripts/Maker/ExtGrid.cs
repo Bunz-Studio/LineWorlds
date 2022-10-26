@@ -18,10 +18,20 @@ namespace ExternMaker
         }
 		
         public Camera targetCamera;
+
+        public Transform[] directionGizmos;
         
         public bool enableGrid = true;
 
-        public float lineSpeed = 15;
+        private float p_lineSpeed = 15;
+        public float lineSpeed
+        {
+            get
+            {
+                return ExtCore.instance != null ? ExtCore.instance.lineMovement.lineSpeed / 2 : p_lineSpeed;
+            }
+        }
+
         public bool enableSnapping;
 
         public bool followObject;
@@ -134,7 +144,6 @@ namespace ExternMaker
         private void OnPostRender()
         {
             if (!enableGrid) return;
-            if (onCameraPostRender != null) onCameraPostRender.Invoke();
             foreach (var action in actionsQueue)
             {
                 if (action.onCall != null) action.onCall.Invoke();
@@ -163,6 +172,13 @@ namespace ExternMaker
             Vector3 off = GetNearestPointOnGrid(new Vector3(camPos.x, 0, camPos.z));
             CreateLineMaterial();
             lineMaterial.SetPass(0);
+            foreach(var trans in directionGizmos)
+            {
+                GL.Begin(GL.LINES);
+                GL.Color(Color.green);
+                DrawGLLine(trans.position, trans.position + trans.forward * 10);
+                GL.End();
+            }
             GL.Begin(GL.LINES);
             GL.Color(gizmoColor);
             //GL.Vertex3(0, 0, 0);

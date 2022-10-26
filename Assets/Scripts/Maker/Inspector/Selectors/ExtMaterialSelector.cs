@@ -29,6 +29,8 @@ namespace ExternMaker
         public Material previousMaterial;
         public Material selectedMaterial;
 
+        bool isUpdating;
+
         public virtual void Initialize(Material init, ExtInsMaterial host)
         {
             previousMaterial = init;
@@ -52,6 +54,7 @@ namespace ExternMaker
 
         public void UpdateUI()
         {
+            isUpdating = true;
             var shader = shaders.Find(val => val == selectedMaterial.shader);
             if(shader != null)
             {
@@ -86,10 +89,12 @@ namespace ExternMaker
             gField.text = (selectedMaterial.color.g * 255).ToString("0");
             bField.text = (selectedMaterial.color.b * 255).ToString("0");
             aField.text = (selectedMaterial.color.a * 255).ToString("0");
+            isUpdating = false;
         }
 
         public virtual void ChooseObject(Material obj)
         {
+            if (isUpdating) return;
             selectedMaterial = obj;
             UpdateUI();
             host.SelectObject(selectedMaterial);

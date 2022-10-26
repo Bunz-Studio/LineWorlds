@@ -58,6 +58,20 @@ namespace ExternMaker
             }
             return list;
         }
+        
+        public List<T> GetAllComponents(List<GameObject> objs, string type)
+        {
+            var list = new List<T>();
+            foreach (var obj in objs)
+            {
+                var comp = obj.GetComponent(typeof(T));
+                if (comp != null)
+                {
+                    if(comp.GetType().FullName == type) list.Add((T)(object)comp);
+                }
+            }
+            return list;
+        }
 
         public bool AreAllObjectContainComponent(Type t, List<GameObject> objs)
         {

@@ -40,7 +40,6 @@ namespace ExternMaker
 
         public override void UpdateInspector(List<GameObject> objs)
         {
-            Debug.Log("Updating Transform Inspector");
             base.UpdateInspector(objs);
             var trans = GetAllComponents(objs);
             inspectedObjects = trans;
@@ -55,7 +54,6 @@ namespace ExternMaker
 
         public override void UpdateIfExist()
         {
-            Debug.Log("Updating Transform If Exist");
             if (inspectedObjects.Count > 0)
 		    {
                 position.ApplyTemp();

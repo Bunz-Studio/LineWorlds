@@ -81,6 +81,7 @@ namespace ExternMaker
                 fieldInfo = info;
                 name = info.Name;
                 type = info.FieldType;
+                typeFullName = info.FieldType.FullName;
                 isField = true;
                 isStatic = info.IsStatic;
             }

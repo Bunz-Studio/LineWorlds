@@ -508,10 +508,12 @@ public class LeanTween : MonoBehaviour {
     public static void cancelAll(){
         cancelAll(false);
     }
+
     public static void cancelAll(bool callComplete){
         init();
         for (int i = 0; i <= tweenMaxSearch; i++)
         {
+            if (tweens[i].uncancellable) continue;
             if (tweens[i].trans != null){
                 if (callComplete && tweens[i].optional.onComplete != null)
                     tweens[i].optional.onComplete();

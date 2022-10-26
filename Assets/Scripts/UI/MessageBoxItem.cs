@@ -16,8 +16,9 @@ public class MessageBoxItem : MonoBehaviour
 	{
 		var obj = Instantiate(buttonPrefab, parent);
 		obj.GetComponent<Button>().onClick.AddListener(() => {
-		                                               	if(button.onClick != null) button.onClick.Invoke();
-		                                               });
+            if (button.onClick != null) button.onClick.Invoke();
+            if (button.closeBox) DestroyMyself();
+        });
 		obj.GetComponentInChildren<Text>().text = button.name;
 	}
 	

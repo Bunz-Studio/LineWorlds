@@ -62,13 +62,30 @@ namespace ExternMaker
 
         public void CreateWithTemplate(int index = 0)
         {
-        	var path = Path.Combine(Storage.GetPathLocal("Projects"), projectInfo.levelName);
+            var path = Path.Combine(Storage.GetPathLocal("Projects"), projectInfo.levelName);
 
-            if(!Directory.Exists(path)) Directory.CreateDirectory(path);
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+                ConfirmCreate(path, index);
+            }
+            else
+            {
+                MessageBox.ShowNondefault("A project with the same name already exists in your projects directory, do you want to replace it? (Your previous project will be lost!)", "Warning!",
+                    new MessageBox.MessageBoxButton[] {
+                        new MessageBox.MessageBoxButton("Yes", true, () => {
+                            ConfirmCreate(path, index);
+                        }),
+                        new MessageBox.MessageBoxButton("No", true)}, false
+                    );
+            }
+        }
 
+        public void ConfirmCreate(string path, int index = 0)
+        {
             projectManager.ResetScene();
             projectManager.directory = path;
-            
+
             projectSettings.backgroundColor = new Color(15 / 255, 15 / 255, 15 / 255, 1);
             RenderSettings.fog = false;
             RenderSettings.fogDensity = 0.03f;
@@ -91,8 +108,10 @@ namespace ExternMaker
                 obji.transform.position = obj.transform.position;
             }
             projectManager.Save();
-            
+
             ExtModProject.Generate(Storage.GetPathLocal("Projects"), projectManager.project.info.levelName);
+
+            gameObject.SetActive(false);
         }
     }
 

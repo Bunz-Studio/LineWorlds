@@ -22,16 +22,20 @@ namespace ExternMaker
         public List<ExtHierarchyItem> selectedItems = new List<ExtHierarchyItem>();
         public List<ExtObject> objects = new List<ExtObject>();
 
+        public Transform moveItemBar;
+        public ExtHierarchyItem heldItem;
+        public ExtHierarchyItem moveSiblingItem;
+
         public Color normalColor = Color.gray;
         public Color selectedColor = Color.blue;
 
         void Start()
         {
             //ExtCore.instance.OnHierachyUpdate += UpdateHierarchy;
-
+            ExtCore.instance.OnObjectUpdate += UpdateHierarchy;
+            ExtCore.instance.OnClearObject += ObjectClear;
             //ExtCore.instance.OnObjectUpdate += SelectionUpdate;
         }
-
         private void OnDestroy()
         {
             p_instance = null;
@@ -60,8 +64,9 @@ namespace ExternMaker
         {
             foreach (var s in selectedItems)
             {
-                RemoveSelected(s);
+                RemoveSelected(s, false);
             }
+            selectedItems.Clear();
         }
         public void ClearItems()
         {
@@ -79,29 +84,26 @@ namespace ExternMaker
             }
         }
 
-        public void InitializeHierarchy()
+        public void UpdateHierarchy(List<GameObject> objs)
         {
-
-        }
-
-        public void UpdateHierarchy(HierarchyUpdate info)
-        {
-            if (info != null)
+            ClearSelection();
+            foreach(var obj in objs)
             {
-                for (int i = 0; i < info.adds.Length; i++)
+                var ext = obj.GetComponent<ExtObject>();
+                if(ext != null)
                 {
-                    var obj = info.adds[i];
-                    if (!objects.Contains(obj))
+                    var item = GetHierarchyItem(ext);
+                    if(item != null)
                     {
-                        AddHierarchyItem(obj);
+                        AddSelected(item);
                     }
                 }
-
-                for (int i = 0; i < info.removes.Length; i++)
-                {
-                    RemoveHierarchyItem(info.removes[i]);
-                }
             }
+        }
+
+        public void ObjectClear()
+        {
+            ClearSelection();
         }
 
         public void AddHierarchyItem(ExtObject obj, int index = -1)
@@ -142,26 +144,31 @@ namespace ExternMaker
 
         public void SetSelected(ExtHierarchyItem item)
         {
-            if(Input.GetKey(KeyCode.LeftShift | KeyCode.RightShift))
+            if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 if (selectedItems.Count > 0)
                 {
                     var selection = new List<ExtHierarchyItem>();
-                    var firstIndex = items.FindIndex(val => val == selectedItems[0]);
-                    var index = items.FindIndex(val => val == item);
-
-                    for(int i = firstIndex; i < index + 1; i++)
+                    var firstIndex = items.IndexOf(selectedItems[0]);
+                    var index = items.IndexOf(item);
+                    if(index < firstIndex)
                     {
-                        if (selectedItems.Contains(items[i]))
+                        for(int i = firstIndex; i > index - 1; i--)
                         {
-                            AddSelected(items[i]);
+                            selection.Add(items[i]);
                         }
-                        selection.Add(items[i]);
                     }
-
-                    foreach(var s in selectedItems)
+                    else
                     {
-                        if (!selection.Contains(s)) RemoveSelected(s);
+                        for (int i = firstIndex; i < index + 1; i++)
+                        {
+                            selection.Add(items[i]);
+                        }
+                    }
+                    ClearSelection();
+                    foreach(var rItem in selection)
+                    {
+                        AddSelected(rItem);
                     }
                 }
             }
@@ -173,8 +180,9 @@ namespace ExternMaker
             {
                 foreach (var s in selectedItems)
                 {
-                    RemoveSelected(s);
+                    RemoveSelected(s, false);
                 }
+                selectedItems.Clear();
                 AddSelected(item);
             }
             UpdateSelections();
@@ -188,10 +196,17 @@ namespace ExternMaker
 
         public void RemoveSelected(ExtHierarchyItem item, bool remove = true)
         {
-            item.image.color = normalColor;
+            try
+            {
+                item.image.color = normalColor;
 
-            if (!remove) return;
-            if (selectedItems.Contains(item)) selectedItems.Remove(item);
+                if (!remove) return;
+                if (selectedItems.Contains(item)) selectedItems.Remove(item);
+            }
+            catch
+            {
+
+            }
         }
 
         public void UpdateSelections()
@@ -219,6 +234,25 @@ namespace ExternMaker
                 if (item.target.transform == tr) return item;
             }
             return null;
+        }
+
+        public void HoldItem(ExtHierarchyItem item)
+        {
+            heldItem = item;
+        }
+
+        public void ReleaseItem(ExtHierarchyItem item)
+        {
+            if (heldItem == item) heldItem = null;
+        }
+
+        public void ItemHovered(ExtHierarchyItem item)
+        {
+            if(heldItem != null)
+            {
+                moveSiblingItem = item;
+                moveItemBar.SetSiblingIndex(item.transform.GetSiblingIndex() + 1);
+            }
         }
     }
 

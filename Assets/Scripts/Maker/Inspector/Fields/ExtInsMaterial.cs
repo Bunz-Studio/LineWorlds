@@ -14,15 +14,22 @@ namespace ExternMaker
 
         public override void ApplyTemp()
         {
-            if (source != null || isStatic)
+            isUpdatingField = true;
+            values = GetValues();
+            if (AreValuesSimilar())
             {
-                var o = GetValue();
-                var t = ((Material)o).color;
+                var t = ((Material)values[0]).color;
                 base.ApplyTemp();
 
                 fieldImage.color = t;
                 fieldColorValues.text = (t.r * 255).ToString("0") + ", " + (t.g * 255).ToString("0") + ", " + (t.b * 255).ToString("0") + ", " + (t.a * 255).ToString("0");
             }
+            else
+            {
+                fieldImage.color = Color.black;
+                fieldColorValues.text = "-";
+            }
+            isUpdatingField = false;
         }
 
         public void OpenSelector()

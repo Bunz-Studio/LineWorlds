@@ -52,7 +52,22 @@ namespace ExternMaker
 
         public string GetViewString()
         {
-            return AreValuesSimilar() ? ((UnityEngine.Object)values[0]).name : "-";
+            var v = values[0];
+            if (AreValuesSimilar())
+            {
+                try
+                {
+                    return v == null ? "None" : ((UnityEngine.Object)v).name;
+                }
+                catch
+                {
+                    return "None";
+                }
+            }
+            else
+            {
+                return "-";
+            }
         }
 
         public void ApplyInputs(bool reset = false)
@@ -62,9 +77,19 @@ namespace ExternMaker
         
         public void OpenSelector()
         {
-            if (selector == null) selector = (ExtObjectSelector)FindObjectOfType(Type.GetType(selectorType));
-            selector.inspectedType = GetInspectedType();
-        	selector.Initialize((UnityEngine.Object)GetValue(), this);
+            if (propertyInfo.type.FullName == typeof(GameObject).FullName)
+            {
+                if (selector == null) selector = ExtInspector.instance.gameObjectSelector;
+                selector.inspectedType = GetInspectedType();
+                selector.Initialize((UnityEngine.GameObject)GetValue(), this);
+            }
+            else
+            {
+                if (selector == null) selector = ExtInspector.instance.objectReferenceSelector;
+                // if (selector == null) selector = (ExtObjectSelector)FindObjectOfType(Type.GetType(selectorType));
+                selector.inspectedType = GetInspectedType();
+                selector.Initialize((UnityEngine.GameObject)GetValue(), this);
+            }
         }
         
         public void SelectObject(UnityEngine.Object obj)
@@ -76,6 +101,7 @@ namespace ExternMaker
             }
             SetValue(obj);
         	ApplyTemp();
+            fieldShow.text = obj.name;
         }
         
         public void EndObject(UnityEngine.Object obj)
@@ -87,6 +113,7 @@ namespace ExternMaker
                 FinalizeEdit();
                 isEditing = false;
             }
+            fieldShow.text = obj.name;
         }
     }
 }

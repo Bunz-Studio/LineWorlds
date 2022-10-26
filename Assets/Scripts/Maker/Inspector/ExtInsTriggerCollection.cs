@@ -7,7 +7,10 @@ namespace ExternMaker
     public class ExtInsTriggerCollection : ExtInspectable<TriggerCollection>
     {
         public ExtInsEnum triggerTypeIns;
+        public Transform newOrder;
         public Dictionary<TriggerCollection.TrigType, int> triggerTypes = new Dictionary<TriggerCollection.TrigType, int>();
+
+        public List<NewTriggerGroup> newInspectorGroups = new List<NewTriggerGroup>();
         public List<TriggerGroup> inspectorGroups = new List<TriggerGroup>();
         bool isInitialized;
 
@@ -25,10 +28,17 @@ namespace ExternMaker
             {
                 UpdateIfExist();
             };
-            foreach (var insp in inspectorGroups)
+
+            foreach(var insp in newInspectorGroups)
+            {
+                insp.Initialize(newOrder);
+                insp.SetActive(false);
+            }
+
+            /*foreach (var insp in inspectorGroups)
             {
                 insp.Initialize();
-            }
+            }*/
 
             int i = 0;
             foreach (var name in Enum.GetNames(typeof(TriggerCollection.TrigType)))
@@ -76,19 +86,20 @@ namespace ExternMaker
 
         public void OpenAppropiateFields()
         {
-            if(inspectedObject != null)
+            if (inspectedObjects.Count > 0)
             {
-                var index = triggerTypes.ContainsKey(inspectedObject.TriggerTypes) ? triggerTypes[inspectedObject.TriggerTypes] : 0;
-                var appropriate = new List<TriggerGroup>();
-                for (int i = 0; i < inspectorGroups.Count; i++)
+                var index = GetTriggerTypeIndex();
+                if (index < 0) return;
+                var appropriate = new List<NewTriggerGroup>();
+                for (int i = 0; i < newInspectorGroups.Count; i++)
                 {
                     if (i == index)
                     {
-                        appropriate.Add(inspectorGroups[i]);
+                        appropriate.Add(newInspectorGroups[i]);
                     }
                     else
                     {
-                        inspectorGroups[i].SetActive(false);
+                        newInspectorGroups[i].SetActive(false);
                     }
                 }
                 foreach (var a in appropriate)
@@ -100,14 +111,26 @@ namespace ExternMaker
 
         public void UpdateAppropiateFields()
         {
-            if (inspectedObject != null)
+            if (inspectedObjects.Count > 0)
             {
-                var index = triggerTypes.ContainsKey(inspectedObject.TriggerTypes) ? triggerTypes[inspectedObject.TriggerTypes]: 0;
-                for (int i = 0; i < inspectorGroups.Count; i++)
+                var index = GetTriggerTypeIndex();
+                if (index < 0) return;
+                for (int i = 0; i < newInspectorGroups.Count; i++)
                 {
-                    inspectorGroups[i].Update(inspectedObjects);
+                    newInspectorGroups[i].Update(inspectedObjects);
                 }
             }
+        }
+
+        public int GetTriggerTypeIndex()
+        {
+            if (inspectedObjects.Count < 1) return -1;
+            TriggerCollection.TrigType type = inspectedObjects[0].TriggerTypes;
+            foreach(var obj in inspectedObjects)
+            {
+                if (obj.TriggerTypes != type) return -1;
+            }
+            return triggerTypes.ContainsKey(type) ? triggerTypes[type] : -1;
         }
 
         public override void SetInspectorAs(bool active)
@@ -116,7 +139,7 @@ namespace ExternMaker
             triggerTypeIns.gameObject.SetActive(active);
             if (!active)
             {
-                foreach (var insp in inspectorGroups)
+                foreach (var insp in newInspectorGroups)
                 {
                     insp.SetActive(active);
                 }
@@ -130,6 +153,55 @@ namespace ExternMaker
         [Serializable]
         public class InspectableTriggerField : InspectField<TriggerCollection>
         {
+        }
+
+        [Serializable]
+        public class NewTriggerGroup
+        {
+            public string groupName;
+            public List<InfoField> infos = new List<InfoField>();
+            public List<CustomInspectField> inspectFields = new List<CustomInspectField>();
+
+            public void Initialize(Transform self)
+            {
+                for(int i = infos.Count; i > 0; i--)
+                {
+                    var info = infos[i - 1];
+                    var ins = info.GetInstance(typeof(TriggerCollection), self, 3);
+                    if (ins != null)
+                    {
+                        inspectFields.Add(ins);
+                    }
+                }
+
+                /*foreach (var insp in inspectFields)
+                {
+                    insp.Initialize();
+                }*/
+            }
+
+            public void Update(List<TriggerCollection> objs)
+            {
+                foreach (var insp in inspectFields)
+                {
+                    if (objs != null && objs.Count > 0) insp.extFieldInspect.sources = new List<object>(objs);
+                    insp.extFieldInspect.ApplyTemp();
+                    insp.extFieldInspect.UpdateField(new List<object>(objs));
+                }
+            }
+
+            public void SetActive(bool to)
+            {
+                foreach (var insp in inspectFields)
+                {
+                    insp.extFieldInspect.gameObject.SetActive(to);
+                    var enumIns = insp.extFieldInspect.GetComponent<ExtInsEnum>();
+                    if (enumIns != null)
+                    {
+                        enumIns.dropdownMenu.SetActive(to ? enumIns.dropdownMenu.activeSelf : to);
+                    }
+                }
+            }
         }
 
         [Serializable]

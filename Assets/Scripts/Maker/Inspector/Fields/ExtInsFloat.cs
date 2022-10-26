@@ -43,7 +43,14 @@ namespace ExternMaker
 
         public string GetViewString()
         {
-            return AreValuesSimilar() ? ((float)values[0]).ToString() : "-";
+            try
+            {
+                return AreValuesSimilar() ? ((float)values[0]).ToString() : "-";
+            }
+            catch
+            {
+                return "0";
+            }
         }
 
         public void ApplyInputs(bool reset = false)

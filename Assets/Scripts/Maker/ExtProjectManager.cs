@@ -51,7 +51,7 @@ namespace ExternMaker
         }
 
         public static System.Action OnAfterLoadingProject;
-        
+        public int loadObjectsPerFrame = 25;
         public List<LiwCustomObject> customObjects
         {
             get
@@ -154,16 +154,26 @@ namespace ExternMaker
 
                 ExtResourcesManager.instance.RefreshResourceList();
 
-                loadingPanel.infoLabel.text = "Spawning " + proj.gameObjects.Count + " objects";
+                loadingPanel.infoLabel.text = "Spawning 0/" + proj.gameObjects.Count + " objects";
                 loadingPanel.SetProgress(0.8f);
                 yield return new WaitForSecondsRealtime(0.2f);
 
                 var objs = new List<ExtObject>();
+                int i = 0;
+                int c = 0;
                 foreach (var obj in proj.gameObjects)
                 {
+                    c++;
+                    loadingPanel.infoLabel.text = "Spawning " + c + "/" + proj.gameObjects.Count + " objects";
                     var inst = LiwSerializer.SpawnObject(obj);
                     inst.transform.SetParent(ExtCore.instance.globalParent);
                     objs.Add(inst);
+                    i++;
+                    if (i >= loadObjectsPerFrame)
+                    {
+                        i = 0;
+                        yield return new WaitForSecondsRealtime(0.01f);
+                    }
                 }
 
                 foreach (var file in Directory.GetFiles(Path.Combine(directory, "Resources")))
@@ -186,6 +196,11 @@ namespace ExternMaker
                     ExtActionInspector.Log("Failed importing audio when opening project: " + e.Message, "ExtAudioImporter", e.StackTrace);
                 }
 
+                loadingPanel.infoLabel.text = "Fixing inspector";
+                yield return new WaitForSecondsRealtime(0.15f);
+                ExtSelection.instance.transformGizmo.AddTarget(ExtCore.instance.lineMovement.transform);
+                ExtSelection.instance.ClearTargets();
+                yield return new WaitForSecondsRealtime(0.2f);
                 loadingPanel.infoLabel.text = "Finished loading project";
                 Destroy(loadingPanel.gameObject);
                 yield return new WaitForSecondsRealtime(0.2f);

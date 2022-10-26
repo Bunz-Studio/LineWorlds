@@ -25,15 +25,24 @@ namespace ExternMaker
 		public bool applyNewID;
 		public bool isInitialized;
 
+        public bool ignoreHierarchy;
+
         public List<int> groupID = new List<int>();
 
         void Start()
-		{
-			if(!isInitialized) Initialize();
+        {
+            if(!ignoreHierarchy) ExtHierarchy.instance.AddHierarchyItem(this);
+            Initialize();
 		}
 		
 		public void Initialize()
-		{
+        {
+            if (isInitialized) return;
+            ForceInitialize();
+		}
+
+        public void ForceInitialize()
+        {
             if (applyNewID)
             {
                 instanceID = ExtCore.AddObject(this);
@@ -42,8 +51,8 @@ namespace ExternMaker
             {
                 Initialize(instanceID);
             }
-			isInitialized = true;
-		}
+            isInitialized = true;
+        }
 		
 		public void Initialize(int id)
 		{
@@ -54,6 +63,18 @@ namespace ExternMaker
         public void NewGroupIDInstance()
         {
             groupID = new List<int>(groupID);
+        }
+
+        private void OnDestroy()
+        {
+            try
+            {
+                if (!ignoreHierarchy) ExtHierarchy.instance.RemoveHierarchyItem(this);
+            }
+            catch
+            {
+
+            }
         }
 
         public enum ObjectType

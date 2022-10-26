@@ -48,11 +48,31 @@ public class MessageBox : MonoBehaviour
 	public class MessageBoxButton
 	{
 		public string name;
+        public bool closeBox;
 		public System.Action onClick;
 		
 		public MessageBoxButton(string name)
 		{
 			this.name = name;
-		}
-	}
+        }
+
+        public MessageBoxButton(string name, bool closeBox)
+        {
+            this.name = name;
+            this.closeBox = closeBox;
+        }
+
+        public MessageBoxButton(string name, bool closeBox, System.Action onClick)
+        {
+            this.name = name;
+            this.closeBox = closeBox;
+            this.onClick = onClick;
+        }
+
+        public MessageBoxButton(string name, System.Action onClick)
+        {
+            this.name = name;
+            this.onClick = onClick;
+        }
+    }
 }

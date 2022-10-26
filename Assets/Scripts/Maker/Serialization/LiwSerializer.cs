@@ -109,6 +109,13 @@ public static class LiwSerializer
             }
         }
 
+        var b = obj.GetComponent<SerializableTrigger>();
+        if (b != null)
+        {
+            b.serializer.TakeValuesFromComponent(b.GetType(), b);
+            cls.components.Add(b.serializer.GetData());
+        }
+
         return cls;
     }
 
