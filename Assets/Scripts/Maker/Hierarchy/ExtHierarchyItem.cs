@@ -5,14 +5,12 @@ using System.Collections.Generic;
 
 namespace ExternMaker
 {
-    public class ExtHierarchyItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
+    public class ExtHierarchyItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         public ExtObject target;
         public ExtHierarchy hierarchy;
         public Text text;
         public Image image;
-
-        const bool interactionAvailable = false;
 
         void Start()
         {
@@ -37,23 +35,36 @@ namespace ExternMaker
         }
 
         // Events
-        public void OnPointerEnter(PointerEventData pointer)
-        {
-            if(interactionAvailable) hierarchy.ItemHovered(this);
-        }
-        
-        public void OnPointerExit(PointerEventData pointer)
+        bool isHold = true;
+
+        void Update()
         {
         }
 
-        public void OnPointerDown(PointerEventData pointer)
+        public void OnBeginDrag(PointerEventData eventData)
         {
-            if (interactionAvailable) hierarchy.HoldItem(this);
+            if (!isHold)
+            {
+                hierarchy.HoldItem(this);
+                isHold = true;
+            }
         }
 
-        public void OnPointerUp(PointerEventData pointer)
+        public void OnDrag(PointerEventData eventData)
         {
-            if (interactionAvailable) hierarchy.ReleaseItem(this);
+            if (!isHold)
+            {
+                hierarchy.HoldItem(this);
+                isHold = true;
+            }
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            if (isHold)
+            {
+                hierarchy.ReleaseItem(this, eventData);
+            }
         }
     }
 }

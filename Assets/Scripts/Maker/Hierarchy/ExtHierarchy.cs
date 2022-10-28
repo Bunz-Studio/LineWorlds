@@ -238,12 +238,36 @@ namespace ExternMaker
 
         public void HoldItem(ExtHierarchyItem item)
         {
-            heldItem = item;
+            if (heldItem == null)
+            {
+                heldItem = item;
+                Debug.Log("Item held " + item.name);
+            }
         }
 
-        public void ReleaseItem(ExtHierarchyItem item)
+        public void ReleaseItem(ExtHierarchyItem item, UnityEngine.EventSystems.PointerEventData eventData)
         {
-            if (heldItem == item) heldItem = null;
+            if (heldItem != null)
+            {
+                ExtHierarchyItem lastItem = null;
+                foreach(var it in items)
+                {
+                    if(eventData.position.y < it.transform.position.y)
+                    {
+                        lastItem = it;
+                    }
+                }
+                if(lastItem != null)
+                {
+                    moveSiblingItem = lastItem;
+                    var setIndx = moveSiblingItem.target.transform.GetSiblingIndex() + 1;
+                    var itemIndx = moveSiblingItem.transform.GetSiblingIndex() + 1;
+                    heldItem.transform.SetSiblingIndex(itemIndx);
+                    heldItem.target.transform.SetSiblingIndex(setIndx);
+                }
+            }
+            moveItemBar.gameObject.SetActive(false);
+            heldItem = null;
         }
 
         public void ItemHovered(ExtHierarchyItem item)
@@ -251,7 +275,8 @@ namespace ExternMaker
             if(heldItem != null)
             {
                 moveSiblingItem = item;
-                moveItemBar.SetSiblingIndex(item.transform.GetSiblingIndex() + 1);
+                moveItemBar.SetSiblingIndex(moveSiblingItem.transform.GetSiblingIndex());
+                moveItemBar.gameObject.SetActive(true);
             }
         }
     }
@@ -269,7 +294,7 @@ namespace ExternMaker
         public HierarchyUpdate(ExtObject[] adds, ExtObject[] removes)
         {
             this.adds = adds;
-            this.removes = adds;
+            this.removes = removes;
         }
     }
 }
