@@ -1,4 +1,9 @@
-# LineWorlds
+# LineWorlds 
+ [![Latest Version](https://img.shields.io/github/v/release/Bunz-Studio/LineWorlds?color=%23FF3300)](https://github.com/Bunz-Studio/LineWorlds/releases/latest)
+ [![License](https://img.shields.io/github/license/Bunz-Studio/LineWorlds)](https://github.com/Bunz-Studio/LineWorlds/blob/main/LICENSE)
+ [![Total Download Count](https://img.shields.io/github/downloads/Bunz-Studio/LineWorlds/total)](https://github.com/Bunz-Studio/LineWorlds/releases)
+ ![Star Count](https://img.shields.io/github/stars/Bunz-Studio/LineWorlds?style=social)
+ ![Fork Count](https://img.shields.io/github/forks/Bunz-Studio/LineWorlds?style=social)
  An open-source Dancing Line Fanmade editor!
  ## Info
  This project was only made as my hobby. Pretty much a passion project. 
