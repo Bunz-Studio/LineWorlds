@@ -13,8 +13,8 @@ namespace ExternMaker
         public Text componentNameText;
         public Transform publicTransform;
         public List<InspectMatch> matchFields = new List<InspectMatch>();
-        public List<ExtFieldInspect> fieldInspects = new List<ExtFieldInspect>();
 
+        public List<ExtFieldInspect> fieldInspects = new List<ExtFieldInspect>();
         public List<CustomInspectField> inspectFields = new List<CustomInspectField>();
         public object currentObjectType;
         bool isInitialized;

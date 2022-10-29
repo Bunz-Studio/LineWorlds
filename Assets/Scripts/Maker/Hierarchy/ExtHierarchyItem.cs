@@ -5,12 +5,13 @@ using System.Collections.Generic;
 
 namespace ExternMaker
 {
-    public class ExtHierarchyItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class ExtHierarchyItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         public ExtObject target;
         public ExtHierarchy hierarchy;
         public Text text;
         public Image image;
+        bool notMovable;
 
         void Start()
         {
@@ -20,8 +21,9 @@ namespace ExternMaker
         public void Initialize(ExtObject obj)
         {
             target = obj;
-
             text.text = obj.name;
+
+            if (obj.tag == "Player") notMovable = true;
         }
 
         public void UpdateHierarchy(HierarchyUpdate info)
@@ -35,36 +37,56 @@ namespace ExternMaker
         }
 
         // Events
-        bool isHold = true;
+        bool isHovered;
+        bool isDown;
+        bool nowHeld;
+        Vector3 pos;
 
         void Update()
         {
-        }
+            text.text = target.name;
+            if (notMovable) return;
 
-        public void OnBeginDrag(PointerEventData eventData)
-        {
-            if (!isHold)
+            if (Input.GetMouseButtonDown(0) && isHovered)
             {
-                hierarchy.HoldItem(this);
-                isHold = true;
+                isDown = true;
+                pos = Input.mousePosition;
+            }
+
+            if (isDown)
+            {
+                if (pos != Input.mousePosition)
+                {
+                    if (!nowHeld)
+                    {
+                        hierarchy.HoldItem(this);
+                        nowHeld = true;
+                    }
+                    pos = Input.mousePosition;
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (nowHeld)
+                {
+                    hierarchy.ReleaseItem(this);
+                    nowHeld = false;
+                }
+                isDown = false;
             }
         }
 
-        public void OnDrag(PointerEventData eventData)
+        public void OnPointerEnter(PointerEventData pointer)
         {
-            if (!isHold)
-            {
-                hierarchy.HoldItem(this);
-                isHold = true;
-            }
+            if (notMovable) return;
+            isHovered = true;
+            hierarchy.ItemHovered(this);
         }
 
-        public void OnEndDrag(PointerEventData eventData)
+        public void OnPointerExit(PointerEventData pointer)
         {
-            if (isHold)
-            {
-                hierarchy.ReleaseItem(this, eventData);
-            }
+            isHovered = false;
         }
     }
 }

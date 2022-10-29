@@ -60,6 +60,16 @@ namespace ExternMaker
             }
         }
 
+        public void ResortItems()
+        {
+            int i = 0;
+            foreach(var item in items)
+            {
+                item.transform.SetSiblingIndex(i);
+                i++;
+            }
+        }
+
         public void ClearSelection()
         {
             foreach (var s in selectedItems)
@@ -245,25 +255,20 @@ namespace ExternMaker
             }
         }
 
-        public void ReleaseItem(ExtHierarchyItem item, UnityEngine.EventSystems.PointerEventData eventData)
+        public void ReleaseItem(ExtHierarchyItem item)
         {
             if (heldItem != null)
             {
-                ExtHierarchyItem lastItem = null;
-                foreach(var it in items)
+                if(moveSiblingItem != null)
                 {
-                    if(eventData.position.y < it.transform.position.y)
-                    {
-                        lastItem = it;
-                    }
-                }
-                if(lastItem != null)
-                {
-                    moveSiblingItem = lastItem;
-                    var setIndx = moveSiblingItem.target.transform.GetSiblingIndex() + 1;
+                    var setIndx = moveSiblingItem.target.transform.GetSiblingIndex();
                     var itemIndx = moveSiblingItem.transform.GetSiblingIndex() + 1;
+                    var indexItemIndx = items.IndexOf(moveSiblingItem);
                     heldItem.transform.SetSiblingIndex(itemIndx);
                     heldItem.target.transform.SetSiblingIndex(setIndx);
+                    items.Remove(heldItem);
+                    items.Insert(indexItemIndx, heldItem);
+                    ResortItems();
                 }
             }
             moveItemBar.gameObject.SetActive(false);

@@ -74,8 +74,22 @@ gameObjects:
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
+- instanceID: 9
+  name: Box1
+  tag: Obstacle
+  groupIDs: []
+  transform:
+    position:
+      x: 5.29869795
+      y: 0.769999981
+      z: 4.50417423
+    rotation: *o3
+    scale: *o2
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
 - instanceID: 4
-  name: Box
+  name: Box2
   tag: Obstacle
   groupIDs: []
   transform:
@@ -89,7 +103,7 @@ gameObjects:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
 - instanceID: 5
-  name: Box
+  name: Box3
   tag: Obstacle
   groupIDs: []
   transform:
@@ -103,7 +117,7 @@ gameObjects:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
 - instanceID: 6
-  name: Box
+  name: Box4
   tag: Obstacle
   groupIDs: []
   transform:
@@ -117,7 +131,7 @@ gameObjects:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
 - instanceID: 7
-  name: Box
+  name: Box5
   tag: Obstacle
   groupIDs: []
   transform:
@@ -131,7 +145,7 @@ gameObjects:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
 - instanceID: 8
-  name: Box
+  name: Box6
   tag: Obstacle
   groupIDs: []
   transform:
@@ -144,22 +158,36 @@ gameObjects:
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
-- instanceID: 9
-  name: Box
+- instanceID: 11
+  name: Mountain1
   tag: Obstacle
   groupIDs: []
   transform:
     position:
-      x: 5.29869795
-      y: 0.769999981
-      z: 4.50417423
+      x: -14.2141199
+      y: -45
+      z: 34.9302216
     rotation: *o3
     scale: *o2
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Crate_Sealed_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.47058823704719546,"g":0.26274511218070986,"b":0.11372549086809159,"a":1.0}}]}'
+    data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Mountain_Grass_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
+- instanceID: 12
+  name: Mountain2
+  tag: Obstacle
+  groupIDs: []
+  transform:
+    position:
+      x: 40.0587807
+      y: -45
+      z: -27.2359104
+    rotation: *o3
+    scale: *o2
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Mountain_Grass_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
 - instanceID: 10
-  name: Mountain_Grass_01 1_1_0
+  name: Mountain3
   tag: Untagged
   groupIDs: []
   transform:
@@ -175,31 +203,3 @@ gameObjects:
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
     data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Mountain_Grass_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
-- instanceID: 11
-  name: Mountain_Grass_01 1_1_0
-  tag: Obstacle
-  groupIDs: []
-  transform:
-    position:
-      x: -14.2141199
-      y: -45
-      z: 34.9302216
-    rotation: *o3
-    scale: *o2
-  components:
-  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Mountain_Grass_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
-- instanceID: 12
-  name: Mountain_Grass_01 1_1_0
-  tag: Obstacle
-  groupIDs: []
-  transform:
-    position:
-      x: 40.0587807
-      y: -45
-      z: -27.2359104
-    rotation: *o3
-    scale: *o2
-  components:
-  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":true,"meshInstanceID":0,"meshResource":"Mountain_Grass_01 1_1_0.obj","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":2,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
