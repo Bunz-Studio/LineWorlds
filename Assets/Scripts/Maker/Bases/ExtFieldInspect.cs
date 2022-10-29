@@ -82,6 +82,7 @@ namespace ExternMaker
         public GameObject additionalObject;
 
         public bool isUpdatingField;
+        public bool sourceless;
 
         public virtual void Initialize()
         {
@@ -105,7 +106,7 @@ namespace ExternMaker
 
         public virtual bool AreValuesSimilar()
         {
-            if (isStatic) return true;
+            if (isStatic || sourceless) return true;
             
             if (values.Count < 1) return false;
             for (int i = 1; i < values.Count; i++)
@@ -124,6 +125,7 @@ namespace ExternMaker
 
         public virtual List<object> GetValues()
         {
+            if (sourceless) return values;
             var l = new List<object>();
             if (isStatic) l.Add(propertyInfo.GetValue(null));
             foreach (var s in sources)
@@ -140,6 +142,7 @@ namespace ExternMaker
 
         public virtual object GetValue(object src = null)
         {
+            if (sourceless) return values.Count > 0 ? values[0] : null;
             values = GetValues();
             src = src ?? source;
             return value;
@@ -147,6 +150,7 @@ namespace ExternMaker
 
         public virtual void SetValue(object value)
         {
+            if (sourceless) return;
             if (isStatic) propertyInfo.SetValue(null, value);
             for (int i = 0; i < sources.Count; i++)
             {
@@ -156,6 +160,7 @@ namespace ExternMaker
 
         public virtual void SetValues(List<object> values)
         {
+            if (sourceless) return;
             if (isStatic) propertyInfo.SetValue(null, values[0]);
             for (int i = 0; i < sources.Count; i++)
             {
@@ -250,6 +255,7 @@ namespace ExternMaker
 
         public ExtObject TryGet()
         {
+            if (sourceless) return null;
             if (source.GetType().FullName == "UnityEngine.GameObject")
             {
                 return ((GameObject)source).GetComponent<ExtObject>();

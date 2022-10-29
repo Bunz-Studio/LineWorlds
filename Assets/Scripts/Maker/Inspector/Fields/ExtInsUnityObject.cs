@@ -80,16 +80,13 @@ namespace ExternMaker
             if (propertyInfo.type.FullName == typeof(GameObject).FullName)
             {
                 if (selector == null) selector = ExtInspector.instance.gameObjectSelector;
-                selector.inspectedType = GetInspectedType();
-                selector.Initialize((UnityEngine.GameObject)GetValue(), this);
             }
             else
             {
                 if (selector == null) selector = ExtInspector.instance.objectReferenceSelector;
-                // if (selector == null) selector = (ExtObjectSelector)FindObjectOfType(Type.GetType(selectorType));
-                selector.inspectedType = GetInspectedType();
-                selector.Initialize((UnityEngine.GameObject)GetValue(), this);
             }
+            selector.inspectedType = GetInspectedType();
+            selector.Initialize((UnityEngine.Object)GetValue(), this);
         }
         
         public void SelectObject(UnityEngine.Object obj)

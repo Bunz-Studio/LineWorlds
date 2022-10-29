@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using ExternMaker.Easings;
 
 namespace ExternMaker
 {
@@ -64,11 +65,9 @@ namespace ExternMaker
                 return cls;
             }
             inst.delayToFade = 3 * delayRate;
-            var tween = LeanTween.value(inst.instance, Color.green, Color.white, 1).setOnUpdate((Color val) =>
-            {
+            EaseTool.TweenColor(Color.green, Color.white, 1).SetOnUpdate((Color val) => {
                 inst.textUi.color = val;
             });
-            tween.uncancellable = true;
             return inst;
         }
 
@@ -140,18 +139,19 @@ namespace ExternMaker
             }
             else
             {
-                var tween = LeanTween.value(1, 0, 1).setOnUpdate((float val) =>
+                EaseTool.TweenFloat(1, 0, 1).SetOnUpdate((float f) =>
                 {
-                    if(canvasGroup != null) canvasGroup.alpha = val;
-                }
-                ).setOnComplete(() =>
-                {
-                    Object.DestroyImmediate(instance);
-                }
-                );
-                tween.uncancellable = true;
+                    float val = (float)f;
+                    if (canvasGroup != null) canvasGroup.alpha = val;
+                });
+                EaseTool.self.Invoke("DestroyThis", 1);
                 isDone = true;
             }
+        }
+
+        public void DestroyThis()
+        {
+            Object.DestroyImmediate(instance);
         }
     }
 }

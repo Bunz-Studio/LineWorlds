@@ -5,22 +5,43 @@ public class UIAnimationControl : MonoBehaviour
 {
 	public Animator animator;
 	public CanvasGroup gr;
-	public string openState;
+    public string openState;
 	public string closeState;
-	
-	public bool isOpened;
+    public bool useTransform;
+    public Transform openedTransform;
+    public Transform closedTransform;
+
+    public bool isOpened;
     bool wasOpened;
 	
 	public void SwitchState()
 	{
-		string state = isOpened ? closeState : openState;
-		animator.Play(state);
+        if (useTransform)
+        {
+            Vector3 target = isOpened ? closedTransform.transform.position : openedTransform.transform.position;
+            transform.position = target;
+        }
+        else
+        {
+            string state = isOpened ? closeState : openState;
+            animator.Play(state);
+        }
 		isOpened = !isOpened;
 	}
 
     public void MaybeClose()
     {
-        if (isOpened) animator.Play(closeState);
+        if (isOpened)
+        {
+            if (useTransform)
+            {
+                transform.position = closedTransform.transform.position;
+            }
+            else
+            {
+                animator.Play(closeState);
+            }
+        }
         wasOpened = isOpened;
         isOpened = false;
     }
@@ -29,7 +50,14 @@ public class UIAnimationControl : MonoBehaviour
     {
         if (wasOpened)
         {
-            animator.Play(openState);
+            if (useTransform)
+            {
+                transform.position = openedTransform.transform.position;
+            }
+            else
+            {
+                animator.Play(openState);
+            }
             isOpened = true;
         }
     }

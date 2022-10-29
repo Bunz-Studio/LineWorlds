@@ -7,16 +7,21 @@ namespace ExternMaker
 {
     public class ExtInsMeshRenderer : ExtInspectable<MeshRenderer>
     {
-    	public PropertyInfo sharedMaterialProperty;
-    	public PropertyInfo materialColor;
-    	// public ExtInsColor mesh;
         public ExtInsMaterial material;
+        public ExtInsArrayMaterial materials;
         
     	void Start()
     	{
-    		var tr = typeof(MeshRenderer);
-    		sharedMaterialProperty = tr.GetProperty("sharedMaterial");
-            material.propertyInfo = new ExtProperty(tr, "sharedMaterial");
+            if (material != null)
+            {
+                material.Initialize();
+                material.propertyInfo = new ExtProperty(typeof(MeshRenderer), "sharedMaterial");
+            }
+            if (materials != null)
+            {
+                materials.Initialize();
+                materials.propertyInfo = new ExtProperty(typeof(MeshRenderer), "sharedMaterials");
+            }
     	}
 
         public override void UpdateInspector(List<GameObject> objs)
@@ -27,7 +32,8 @@ namespace ExternMaker
             if (objs.Count > 0)
             {
                 var srcs = new List<object>(meshes);
-                material.UpdateField(srcs);
+                if (materials != null) materials.UpdateField(srcs);
+                if (material != null) material.UpdateField(srcs);
             }
         }
 
@@ -35,16 +41,22 @@ namespace ExternMaker
 		{
 			if(inspectedObject != null)
 			{
-				material.ApplyTemp();
-			
-				base.UpdateInspector(inspectedObject);
+				if (materials != null) materials.ApplyTemp();
+                if (material != null) material.ApplyTemp();
+
+                base.UpdateInspector(inspectedObject);
 			}
 		}
 		
 		public override void SetInspectorAs(bool active)
 		{
 			base.SetInspectorAs(active);
-            material.gameObject.SetActive(active);
+            if (material != null) material.gameObject.SetActive(active);
+            if (materials != null)
+            {
+                materials.gameObject.SetActive(active);
+                materials.additionalObject.SetActive(active == false ? false : materials.additionalObject.activeSelf);
+            }
 		}
     }
 }

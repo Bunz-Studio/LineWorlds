@@ -71,7 +71,10 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator LoadAudioFile(string path, System.Action<AudioClip> onSuccess, System.Action onFailed)
     {
-        UnityWebRequest request = UnityWebRequestMultimedia.GetAudioClip(path, AudioType.OGGVORBIS);
+        var ext = Path.GetExtension(path);
+        AudioType type = ext.Contains("mp3") ? AudioType.MPEG : AudioType.OGGVORBIS;
+        Debug.Log($"Loading {path} with extension {ext}");
+        UnityWebRequest request = UnityWebRequestMultimedia.GetAudioClip(path, type);
         yield return request.SendWebRequest();
         if (request.isNetworkError)
         {

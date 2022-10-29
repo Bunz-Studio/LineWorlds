@@ -20,9 +20,11 @@ namespace ExternMaker
         public void BrowseAudio()
         {
             source.Stop();
-            var filter = new FileBrowser.Filter("OGG Vorbis", ".ogg");
+            var filter1 = new FileBrowser.Filter("Supported audio files", ".ogg", ".mp3");
+            var filter2 = new FileBrowser.Filter("OGG Vorbis", ".ogg");
+            var filter3 = new FileBrowser.Filter("MPEG Audio File", ".mp3");
             FileBrowser.Skin = fileBrowserSkin;
-            FileBrowser.SetFilters(true, filter);
+            FileBrowser.SetFilters(true, filter1, filter2, filter3);
             FileBrowser.SetDefaultFilter(".ogg");
             FileBrowser.ShowLoadDialog(
                 (val) =>
@@ -54,6 +56,7 @@ namespace ExternMaker
                 ExtCore.instance.lineMovement.GetComponent<AudioSource>().clip = clip;
                 source.clip = clip;
                 _audioLength = source.clip.length;
+                ExtProjectManager.instance.AddAudio(path);
                 Destroy(loadingPanel.gameObject);
             };
             onFailed += () =>

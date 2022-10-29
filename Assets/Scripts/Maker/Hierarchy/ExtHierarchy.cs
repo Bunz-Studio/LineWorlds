@@ -280,7 +280,8 @@ namespace ExternMaker
             if(heldItem != null)
             {
                 moveSiblingItem = item;
-                moveItemBar.SetSiblingIndex(moveSiblingItem.transform.GetSiblingIndex());
+                var indexItemIndx = items.IndexOf(moveSiblingItem);
+                moveItemBar.SetSiblingIndex(indexItemIndx + 1);
                 moveItemBar.gameObject.SetActive(true);
             }
         }

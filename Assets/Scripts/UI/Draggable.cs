@@ -5,8 +5,8 @@ public class Draggable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 	
 	public Transform target;
 	
-	bool isMouseDown;
-	bool isHovering;
+	public bool isMouseDown;
+    public bool isHovering;
 	Vector3 startMousePosition;
 	Vector3 startPosition;
 
@@ -20,6 +20,13 @@ public class Draggable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private void OnEnable()
     {
+        isHovering = false;
+        isMouseDown = false;
+    }
+
+    private void OnDisable()
+    {
+        isHovering = false;
         isMouseDown = false;
     }
 

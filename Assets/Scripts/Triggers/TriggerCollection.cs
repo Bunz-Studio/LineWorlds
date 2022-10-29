@@ -235,7 +235,7 @@ public class TriggerCollection : MonoBehaviour
                     {
                         foreach (int g in obj.groupID)
                         {
-                            if (MRSTargetGroup.Find(val => val.ToString() == g.ToString()) > -1)
+                            if (MRSTargetGroup.FindIndex(val => val.ToString() == g.ToString()) > -1)
                             {
                                 var target = obj.gameObject;
                                 TargetGameObjects.Add(target);

@@ -1,0 +1,130 @@
+info:
+  levelName: World Ender
+  description: ''
+  authorName: ''
+  musicName: Untitled
+  musicArtist: Unknown
+  musicFile: audio.mp3
+  levelID: 4333390
+  authorID: 0
+  levelVersion: 1
+  gameVersion: LW0.81
+renderSettings:
+  backgroundColor: &o0
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  fog: false
+  fogDensity: 0.0299999993
+  fogColor: *o0
+lineInfo:
+  instanceID: 1
+  name: Player
+  tag: Player
+  groupIDs: []
+  transform:
+    position: &o1
+      x: 0
+      y: 1
+      z: 0
+    rotation:
+      x: 0
+      y: 90
+      z: 0
+    scale: &o2
+      x: 1
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0}}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedLine
+    data: '{"lineSpeed":12.0}'
+cameraInfo:
+  instanceID: 2
+  name: RuntimeCamera
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: *o1
+    rotation:
+      x: 45.0000038
+      y: 60.0000038
+      z: 0
+    scale: *o2
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedCamera
+    data: '{"rotation":{"x":45.0,"y":60.0,"z":0.0},"offset":{"x":0.0,"y":0.0,"z":0.0},"distance":20.0,"SmoothTime":1.0,"SmoothFactor":1.0,"needtime":1.0}'
+gameObjects:
+- instanceID: 3
+  name: Ground
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: &o3
+      x: 0
+      y: 0
+      z: 0
+    rotation: *o3
+    scale:
+      x: 50
+      y: 1
+      z: 50
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0}}]}'
+- instanceID: 4
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 0.373754621
+      y: 2
+      z: -0.495595992
+    rotation: &o4
+      x: 0
+      y: 44.9999962
+      z: 0
+    scale: &o5
+      x: 15
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 5
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 8.66531849
+      y: 2.44970703
+      z: -0.626675844
+    rotation: *o4
+    scale: *o5
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.3529411852359772,"g":1.0,"b":0.7843137383460999,"a":1.0}}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":4,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 6
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 8.13748932
+      y: 2.89941406
+      z: 7.52484655
+    rotation: *o4
+    scale: *o5
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.9843137264251709,"g":1.0,"b":0.0,"a":1.0}}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":5,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[2],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'

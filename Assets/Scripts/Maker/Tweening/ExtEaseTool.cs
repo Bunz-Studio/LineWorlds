@@ -14,6 +14,15 @@ namespace ExternMaker.Easings
 		{
 			self = this;
 		}
+
+        public static void Initialization()
+        {
+            if (self != null) return;
+            var instance = new GameObject();
+            var tool = instance.AddComponent<EaseTool>();
+            DontDestroyOnLoad(instance);
+            self = tool;
+        }
 		
 		public void Update()
 		{
@@ -25,12 +34,14 @@ namespace ExternMaker.Easings
 			}
 			for (int i = 0; i < onDestroy.Count; i++)
 			{
+                onDestroy[i].OnComplete.InvokeOnExist();
 				easeables.Remove(onDestroy[i]);
 			}
 		}
 		
 		public static FloatEaseable TweenFloat(float start, float end, float time)
 		{
+            Initialization();
 			var t = new FloatEaseable {
 				start = start,
 				end = end,
@@ -41,8 +52,9 @@ namespace ExternMaker.Easings
 		}
 		
 		public static Vector2Easeable TweenVector2(Vector2 start, Vector2 end, float time)
-		{
-			var t = new Vector2Easeable {
+        {
+            Initialization();
+            var t = new Vector2Easeable {
 				start = start,
 				end = end,
 				length = time
@@ -51,9 +63,10 @@ namespace ExternMaker.Easings
 			return t;
 		}
 		
-		public static ColorEaseable TweenFloat(Color start, Color end, float time)
-		{
-			var t = new ColorEaseable {
+		public static ColorEaseable TweenColor(Color start, Color end, float time)
+        {
+            Initialization();
+            var t = new ColorEaseable {
 				start = start,
 				end = end,
 				length = time
@@ -73,20 +86,46 @@ namespace ExternMaker.Easings
 		public float current;
 		public float length;
 		public Action<object> OnUpdate;
+        public Action OnComplete;
 		
 		public Easeable SetEase(EaseType type)
 		{
 			this.type = type;
 			return this;
 		}
-		
-		public Easeable SetOnUpdate(Action<object> obj)
+
+        public Easeable SetOnComplete(Action obj)
+        {
+            OnComplete += obj.InvokeOnExist;
+            return this;
+        }
+
+        public Easeable SetOnUpdate(Action<object> obj)
 		{
-			OnUpdate = obj;
+			OnUpdate += obj.InvokeOnExist;
 			return this;
-		}
-		
-		public virtual void Ease()
+        }
+
+        public Easeable SetOnUpdate(Action<float> obj)
+        {
+            OnUpdate += val => { if (obj != null) obj.Invoke((float)val); };
+            return this;
+        }
+
+        public Easeable SetOnUpdate(Action<Vector2> obj)
+        {
+            OnUpdate += val => { if (obj != null) obj.Invoke((Vector2)val); };
+            return this;
+        }
+
+        public Easeable SetOnUpdate(Action<Color> obj)
+        {
+            OnUpdate += val => { if (obj != null) obj.Invoke((Color)val); };
+            return this;
+        }
+
+
+        public virtual void Ease()
 		{
 			var n = (float)current + Time.deltaTime;
 			current = n > length ? GetFinal() : n;

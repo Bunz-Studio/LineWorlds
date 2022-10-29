@@ -28,7 +28,7 @@ namespace ExternMaker
 
         public void UpdateHierarchy(HierarchyUpdate info)
         {
-            text.text = target.name;
+            // text.text = target.name;
         }
 
         public void SelectHierarchy()
@@ -79,7 +79,7 @@ namespace ExternMaker
 
         public void OnPointerEnter(PointerEventData pointer)
         {
-            if (notMovable) return;
+            // if (notMovable) return;
             isHovered = true;
             hierarchy.ItemHovered(this);
         }

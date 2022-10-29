@@ -139,7 +139,7 @@ namespace ExternMaker
         public static void Reset()
         {
             objectDictionary.Clear();
-            lastObjectDictionary = 0;
+            lastObjectDictionary = 2;
         }
 
         public ExtObject[] GetObjects()

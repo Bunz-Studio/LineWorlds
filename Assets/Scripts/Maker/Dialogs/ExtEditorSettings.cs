@@ -28,6 +28,20 @@ namespace ExternMaker
             }
         }
 
+        public bool EnableFogInEditing
+        {
+            get
+            {
+                return settings.enableFogInEditing;
+            }
+            set
+            {
+                settings.enableFogInEditing = value;
+                ExtProjectManager.instance.settings.enabledFogInEditing = value;
+                Save();
+            }
+        }
+
         public float GridScale
         {
             get
@@ -141,6 +155,7 @@ namespace ExternMaker
             GridScale = settings.Scale;
             avoidSave = false;
             LoadObjectsPerFrame = settings.loadObjectsPerFrame;
+            EnableFogInEditing = settings.enableFogInEditing;
             UpdateInspectors();
         }
 
@@ -176,6 +191,7 @@ namespace ExternMaker
         public string savePath;
 
         // Editor
+        public bool enableFogInEditing = true;
         public int loadObjectsPerFrame = 25;
     }
 }

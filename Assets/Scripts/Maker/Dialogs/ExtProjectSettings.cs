@@ -6,6 +6,8 @@ namespace ExternMaker
     public class ExtProjectSettings : MonoBehaviour
     {
         public ExtCore core;
+        public bool enablePlaymodeFog;
+        public bool enabledFogInEditing = true;
         public Color backgroundColor
         {
             get
@@ -22,6 +24,7 @@ namespace ExternMaker
         public LiwProjectInfo projectInfo = new LiwProjectInfo();
 
         public ExtInsColor backgroundColorInspect;
+        public ExtInsBool fogEnabling;
 
         public ExtProjectManager projectManager;
         public List<ProjectInfoFieldInspect> projectInfoFieldInspects;
@@ -33,7 +36,13 @@ namespace ExternMaker
             // Background Color Field
             backgroundColorInspect.propertyInfo = new ExtProperty(GetType().GetProperty("backgroundColor"));
             backgroundColorInspect.Initialize();
+            backgroundColorInspect.sources = new List<object>();
             backgroundColorInspect.sources.Add(this);
+
+            fogEnabling.propertyInfo = new ExtProperty(GetType().GetField("enablePlaymodeFog"));
+            fogEnabling.Initialize();
+            fogEnabling.sources = new List<object>();
+            fogEnabling.sources.Add(this);
 
             // Render Settings Fields
             foreach (var insp in renderFieldInspect)
@@ -59,6 +68,7 @@ namespace ExternMaker
         public void UpdateInspectors()
         {
             backgroundColorInspect.ApplyTemp();
+            fogEnabling.ApplyTemp();
 
             foreach (var insp in projectInfoFieldInspects)
             {

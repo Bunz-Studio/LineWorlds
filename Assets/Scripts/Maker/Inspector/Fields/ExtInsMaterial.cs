@@ -46,6 +46,7 @@ namespace ExternMaker
                 isEditing = true;
             }
             SetValue(obj);
+            fieldUpdate.InvokeOnExist(obj);
             ApplyTemp();
         }
 
@@ -53,6 +54,7 @@ namespace ExternMaker
         {
             SetValue(obj);
             ApplyTemp();
+            fieldFinishEdit.InvokeOnExist(obj);
             if (isEditing)
             {
                 FinalizeEdit();

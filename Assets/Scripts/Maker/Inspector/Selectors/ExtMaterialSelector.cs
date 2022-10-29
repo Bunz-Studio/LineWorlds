@@ -103,6 +103,9 @@ namespace ExternMaker
         public virtual void Show()
         {
             gameObject.SetActive(true);
+            var draggable = GetComponentInChildren<Draggable>();
+            draggable.isMouseDown = false;
+            draggable.isHovering = false;
         }
 
         public virtual void FinalClose()

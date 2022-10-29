@@ -50,6 +50,8 @@ namespace ExternMaker
             dropdownMenu = obj;
             itemParent = obj.transform.Find("GroupIDDropdown").Find("Viewport").Find("Content");
             addField = obj.transform.Find("Panel").Find("ListIntDropdownItem").Find("InputField").GetComponent<InputField>();
+            var addButton = obj.transform.Find("Panel").Find("ListIntDropdownItem").Find("AddButton").GetComponent<Button>();
+            addButton.onClick.AddListener(() => AddValueList());
         }
 
         public void FinishEdit()

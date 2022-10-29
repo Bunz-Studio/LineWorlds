@@ -188,8 +188,21 @@ namespace ExternMaker
                 try
                 {
                     var audioFile = Path.Combine(Path.Combine(exeDirectory, directory), "audio.ogg");
+                    var mpegAudioFile = Path.Combine(Path.Combine(exeDirectory, directory), "audio.mp3");
                     // Debug.Log(audioFile);
-                    if (SimpleFileBrowser.FileBrowserHelpers.FileExists(audioFile)) audioManager.TryImport(audioFile); else audioManager.originalAudioPath = null;
+                    if (SimpleFileBrowser.FileBrowserHelpers.FileExists(audioFile))
+                    {
+                        audioManager.TryImport(audioFile);
+                    }
+                    else if(SimpleFileBrowser.FileBrowserHelpers.FileExists(mpegAudioFile))
+                    {
+                        audioManager.TryImport(mpegAudioFile);
+                    }
+                    else
+                    {
+                        audioManager.originalAudioPath = null;
+                    }
+
                 }
                 catch (System.Exception e)
                 {
@@ -209,6 +222,21 @@ namespace ExternMaker
                 OnAfterLoadingProject = null;
             }
             yield return null;
+        }
+
+        public void AddAudio(string path)
+        {
+            if (!string.IsNullOrEmpty(path))
+            {
+                var ext = Path.GetExtension(path);
+                string check = ext.Contains("mp3") ? "audio.ogg" : "audio.mp3";
+                if(Storage.FileExists(Path.Combine(directory, check)))
+                {
+                    File.Delete(Path.Combine(directory, check));
+                }
+                var bytes = File.ReadAllBytes(path);
+                File.WriteAllBytes(Path.Combine(directory, "audio" + ext), bytes);
+            }
         }
 
         public void OpenLiwb(string filePath)
@@ -331,8 +359,10 @@ namespace ExternMaker
             {
                 if (!string.IsNullOrEmpty(audioManager.originalAudioPath))
                 {
+                    var ext = Path.GetExtension(audioManager.originalAudioPath);
                     var bytes = File.ReadAllBytes(audioManager.originalAudioPath);
-                    File.WriteAllBytes(Path.Combine(directory, "audio.ogg"), bytes);
+                    File.WriteAllBytes(Path.Combine(directory, "audio" + ext), bytes);
+                    project.info.musicFile = "audio" + ext;
                 }
             }
             catch (System.Exception e)
@@ -419,6 +449,29 @@ namespace ExternMaker
         {
             p_instance = this;
             Invoke("StartupCheck", 1);
+        }
+        bool pState;
+        private void Update()
+        {
+            if (ExtCore.instance != null)
+            {
+                // bool state = ExtCore.playState == EditorPlayState.Playing ? settings.enablePlaymodeFog : settings.enabledFogInEditing ? settings.enablePlaymodeFog : false;
+                if (ExtCore.playState == EditorPlayState.Playing)
+                {
+                    RenderSettings.fog = settings.enablePlaymodeFog;
+                }
+                else
+                {
+                    if(settings.enabledFogInEditing)
+                    {
+                        RenderSettings.fog = settings.enablePlaymodeFog;
+                    }
+                    else
+                    {
+                        RenderSettings.fog = false;
+                    }
+                }
+            }
         }
 
         public void StartupCheck()

@@ -144,10 +144,10 @@ namespace ExternMaker
         private void OnPostRender()
         {
             if (!enableGrid) return;
-            foreach (var action in actionsQueue)
+            /*foreach (var action in actionsQueue)
             {
                 if (action.onCall != null) action.onCall.Invoke();
-            }
+            }*/
             actionsQueue.Clear();
             DrawGizmosWithGL();
         }

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Reflection;
 using UnityEngine;
-using UnityStandardAssets.ImageEffects;
 
 public class PostTrigger : Trigger
 {
-	public BloomOptimized bloom;
 	public string property = "intensity";
 	public float valueFrom;
 	public float valueTo;
@@ -15,7 +13,7 @@ public class PostTrigger : Trigger
 	FieldInfo field;
 	public override void OnStart()
 	{
-		field = bloom.GetType().GetField(property);
+		//field = bloom.GetType().GetField(property);
 	}
 	
 	public override void OnEnter(Collider other)
@@ -25,6 +23,6 @@ public class PostTrigger : Trigger
 	
 	public void SetPropertyValue(float to)
 	{
-		field.SetValue(bloom, to);
+		//field.SetValue(bloom, to);
 	}
 }

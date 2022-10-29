@@ -1009,7 +1009,7 @@ namespace ExternMaker.Serialization
             {
                 var settings = obj.GetComponent<ExtProjectSettings>();
                 settings.backgroundColor = backgroundColor;
-                RenderSettings.fog = fog;
+                settings.enablePlaymodeFog = fog;
                 RenderSettings.fogDensity = fogDensity;
                 RenderSettings.fogColor = fogColor;
             }
@@ -1018,7 +1018,7 @@ namespace ExternMaker.Serialization
             {
                 var settings = obj.GetComponent<ExtProjectSettings>();
                 backgroundColor = settings.backgroundColor;
-                fog = RenderSettings.fog;
+                fog = settings.enablePlaymodeFog;
                 fogDensity = RenderSettings.fogDensity;
                 fogColor = RenderSettings.fogColor;
             }

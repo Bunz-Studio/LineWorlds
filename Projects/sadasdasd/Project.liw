@@ -1,0 +1,47 @@
+info:
+  levelName: sadasdasd
+  description: ''
+  authorName: ''
+  musicName: Untitled
+  musicArtist: Unknown
+  musicFile: audio.ogg
+  levelID: 4333390
+  authorID: 0
+  levelVersion: 1
+  gameVersion: LW0.81
+renderSettings:
+  backgroundColor: &o0
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  fog: false
+  fogDensity: 0
+  fogColor: *o0
+lineInfo:
+  instanceID: 0
+  name: GameObject
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: &o1
+      x: 0
+      y: 0
+      z: 0
+    rotation: *o1
+    scale: &o2
+      x: 1
+      y: 1
+      z: 1
+  components: []
+cameraInfo:
+  instanceID: 0
+  name: GameObject
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: *o1
+    rotation: *o1
+    scale: *o2
+  components: []
+gameObjects: []
