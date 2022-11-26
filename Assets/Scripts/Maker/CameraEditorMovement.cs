@@ -12,6 +12,8 @@ public class CameraEditorMovement : MonoBehaviour
     
     public Joystick joyStick;
     public float joyStickSpeed = 100f;
+
+    public float mobileMoveSpeed = 1;
     
     class CameraState
     {
@@ -162,7 +164,7 @@ public class CameraEditorMovement : MonoBehaviour
         }
         
         
-        #if UNITY_ANDROID
+        #if UNITY_ANDROID && !UNITY_EDITOR
         HandleAndroidInput();
         #else
         HandlePCInput();
@@ -198,6 +200,7 @@ public class CameraEditorMovement : MonoBehaviour
                 translation *= 10.0f;
             }
 	        translation *= Mathf.Pow(2.0f, boost);
+            translation *= mobileMoveSpeed;
 	
 	        m_TargetCameraState.Translate(translation);
         }

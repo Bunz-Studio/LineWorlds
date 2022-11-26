@@ -44,6 +44,11 @@ public static class Storage
         if (!FileBrowserHelpers.DirectoryExists(path) && !string.IsNullOrWhiteSpace(path)) FileBrowserHelpers.CreateFolderInDirectory(GoUpFolder(path), Path.GetFileName(path));
 	}
 
+    public static void Delete(string path)
+    {
+        if (!FileBrowserHelpers.FileExists(path) && !string.IsNullOrWhiteSpace(path)) FileBrowserHelpers.DeleteFile(path);
+    }
+
     public static string[] GetFilesLocal(string directory)
     {
         CheckDirectory(GetPathLocal(directory));

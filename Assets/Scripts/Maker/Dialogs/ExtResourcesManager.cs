@@ -85,7 +85,6 @@ namespace ExternMaker
             foreach(var l in instanceCollection)
             {
                 var result = l.customObject.id == obj.id;
-                Debug.Log("ID: " + l.customObject.id + " -> " + obj.id + " = " + result);
                 if (result) return l;
             }
             return null;
@@ -246,42 +245,42 @@ namespace ExternMaker
 
         public void AddFile(string path)
         {
-            var bytes = File.ReadAllBytes(path);
+            var bytes = Storage.ReadAllBytes(path);
             WriteDataToResource(Path.GetFileName(path), bytes);
             LiwCustomObject.RegisterMeta(path);
         }
 
         public static byte[] GetDataFromResource(string path)
         {
-            return File.ReadAllBytes(GetObjectPath(path));
+            return Storage.ReadAllBytes(GetObjectPath(path));
         }
 
         public static void WriteDataToResource(string path, byte[] data)
         {
-            File.WriteAllBytes(GetObjectPath(path), data);
+            Storage.WriteAllBytes(GetObjectPath(path), data);
         }
 
         public static string GetStringFromResource(string path)
         {
-            return File.ReadAllText(GetObjectPath(path));
+            return Storage.ReadAllText(GetObjectPath(path));
         }
 
         public static void WriteStringToResource(string path, string content)
         {
-            File.WriteAllText(GetObjectPath(path), content);
+            Storage.WriteAllText(GetObjectPath(path), content);
         }
 
         public void CopyResourcesTo(string folderPath)
         {
             var resPath = Path.Combine(ExtProjectManager.instance.directory, "Resources");
-            var files = Directory.GetFiles(resPath);
+            var files = Storage.GetFiles(resPath);
             foreach(var file in files)
             {
                 if (!file.Contains(".meta"))
                 {
                     var fileName = Path.GetFileName(file);
                     var targetPath = Path.Combine(folderPath, fileName);
-                    File.WriteAllBytes(targetPath, File.ReadAllBytes(file));
+                    Storage.WriteAllBytes(targetPath, Storage.ReadAllBytes(file));
                 }
             }
         }

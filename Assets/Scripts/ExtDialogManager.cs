@@ -78,6 +78,11 @@ namespace ExternMaker
 
         public static ExtDialogInstance Alert(string text)
         {
+            if(instance == null)
+            {
+                Debug.LogWarning(text);
+                return null;
+            }
             return instance.SpawnDialog(text, 1);
         }
 

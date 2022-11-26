@@ -190,11 +190,11 @@ namespace ExternMaker
                     var audioFile = Path.Combine(Path.Combine(exeDirectory, directory), "audio.ogg");
                     var mpegAudioFile = Path.Combine(Path.Combine(exeDirectory, directory), "audio.mp3");
                     // Debug.Log(audioFile);
-                    if (SimpleFileBrowser.FileBrowserHelpers.FileExists(audioFile))
+                    if (Storage.FileExists(audioFile))
                     {
                         audioManager.TryImport(audioFile);
                     }
-                    else if(SimpleFileBrowser.FileBrowserHelpers.FileExists(mpegAudioFile))
+                    else if(Storage.FileExists(mpegAudioFile))
                     {
                         audioManager.TryImport(mpegAudioFile);
                     }
@@ -232,10 +232,10 @@ namespace ExternMaker
                 string check = ext.Contains("mp3") ? "audio.ogg" : "audio.mp3";
                 if(Storage.FileExists(Path.Combine(directory, check)))
                 {
-                    File.Delete(Path.Combine(directory, check));
+                    Storage.Delete(Path.Combine(directory, check));
                 }
-                var bytes = File.ReadAllBytes(path);
-                File.WriteAllBytes(Path.Combine(directory, "audio" + ext), bytes);
+                var bytes = Storage.ReadAllBytes(path);
+                Storage.WriteAllBytes(Path.Combine(directory, "audio" + ext), bytes);
             }
         }
 

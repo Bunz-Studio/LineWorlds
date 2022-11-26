@@ -8,7 +8,7 @@ info:
   levelID: 5486143
   authorID: 32703891
   levelVersion: 4
-  gameVersion: LW0.81
+  gameVersion: LW0.6
 renderSettings:
   backgroundColor: &o0
     r: 0.313725501
@@ -24,11 +24,11 @@ lineInfo:
   tag: Player
   groupIDs: []
   transform:
-    position: &o1
+    position:
       x: 0
-      y: 0.5
+      y: 1
       z: 0
-    rotation: &o3
+    rotation: &o1
       x: 0
       y: 0
       z: 0
@@ -38,7 +38,7 @@ lineInfo:
       z: 1
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":1.0,"a":1.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedLine
     data: '{"lineSpeed":12.0}'
 cameraInfo:
@@ -53,9 +53,7 @@ cameraInfo:
       y: 60.0000038
       z: 0
     scale: *o2
-  components:
-  - fullName: ExternMaker.Serialization.Serializables+SerializedCamera
-    data: '{"rotation":{"x":45.0,"y":60.0,"z":0.0},"offset":{"x":0.0,"y":0.0,"z":0.0},"distance":20.0,"SmoothTime":1.0,"SmoothFactor":1.0,"needtime":1.0}'
+  components: []
 gameObjects:
 - instanceID: 4
   name: Cube(Clone)(Clone)(Clone)(Clone)
@@ -67,14 +65,14 @@ gameObjects:
       x: 89.4181519
       y: -45.1803093
       z: -12.8882799
-    rotation: *o3
-    scale: &o4
+    rotation: *o1
+    scale: &o3
       x: 90
       y: 90
       z: 90
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}]}'
 - instanceID: 5
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -85,11 +83,11 @@ gameObjects:
       x: 39.1176414
       y: -43.4427147
       z: 149.559647
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}]}'
 - instanceID: 6
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -100,11 +98,11 @@ gameObjects:
       x: -21.9866791
       y: -33.6043282
       z: 161.3853
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}]}'
 - instanceID: 7
   name: Half Pyramid(Clone)
   tag: Untagged
@@ -125,7 +123,7 @@ gameObjects:
       z: 0.999999523
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.800000011920929,"b":0.800000011920929,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.800000011920929,"b":0.800000011920929,"a":1.0}]}'
 - instanceID: 8
   name: Half Pyramid(Clone)
   tag: Untagged
@@ -136,14 +134,14 @@ gameObjects:
       x: 188.527206
       y: -18.2139702
       z: 181.354904
-    rotation: &o9
+    rotation: &o8
       x: 0
       y: 45.0000038
       z: 0
     scale: *o2
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.800000011920929,"b":0.800000011920929,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.800000011920929,"b":0.800000011920929,"a":1.0}]}'
 - instanceID: 9
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -154,11 +152,11 @@ gameObjects:
       x: 60.8698044
       y: -49.408329
       z: 170.435303
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 10
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -169,11 +167,11 @@ gameObjects:
       x: 36.797039
       y: -42.3671684
       z: 162.851013
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 11
   name: Cube(Clone)
   tag: Untagged
@@ -184,14 +182,14 @@ gameObjects:
       x: 0
       y: -0.509182692
       z: 0
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 1.20000005
       y: 1
       z: 1.20000005
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 12
   name: Cube(Clone)(Clone)(Clone)
   tag: Untagged
@@ -202,11 +200,11 @@ gameObjects:
       x: 51.8345985
       y: -44.3607597
       z: -63.6517601
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691118240356448,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691118240356448,"a":1.0}]}'
 - instanceID: 13
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -217,11 +215,11 @@ gameObjects:
       x: -18.0471306
       y: -33.8777809
       z: 98.5082397
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}]}'
 - instanceID: 14
   name: Cube(Clone)(Clone)
   tag: Untagged
@@ -232,11 +230,11 @@ gameObjects:
       x: -48.3830605
       y: -27.7461109
       z: 68.158577
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691215097904208,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691215097904208,"a":1.0}]}'
 - instanceID: 15
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -247,11 +245,11 @@ gameObjects:
       x: 76.9975586
       y: -43.3543015
       z: -36.1335487
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 16
   name: Cube(Clone)(Clone)(Clone)
   tag: Untagged
@@ -262,11 +260,11 @@ gameObjects:
       x: 81.2076569
       y: -40.9050598
       z: -46.3059006
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}]}'
 - instanceID: 17
   name: Cube(Clone)(Clone)(Clone)
   tag: Untagged
@@ -277,11 +275,11 @@ gameObjects:
       x: 120.745003
       y: -41.6823807
       z: 5.94397402
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691170394420627,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691170394420627,"a":1.0}]}'
 - instanceID: 18
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -292,11 +290,11 @@ gameObjects:
       x: 139.865601
       y: -43.6022301
       z: 38.5251694
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}]}'
 - instanceID: 19
   name: Cube(Clone)(Clone)(Clone)
   tag: Untagged
@@ -307,11 +305,11 @@ gameObjects:
       x: 160.866898
       y: -41.4556389
       z: 39.5381584
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691215097904208,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691215097904208,"a":1.0}]}'
 - instanceID: 20
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -322,11 +320,11 @@ gameObjects:
       x: 179.506195
       y: -43.4751511
       z: 81.3242874
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691118240356448,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691118240356448,"a":1.0}]}'
 - instanceID: 21
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -337,14 +335,14 @@ gameObjects:
       x: -44.5349884
       y: -17.5387917
       z: 43.5852356
-    rotation: *o3
-    scale: &o5
+    rotation: *o1
+    scale: &o4
       x: 1
       y: 90
       z: 1
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069100648164749,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069100648164749,"a":1.0}]}'
 - instanceID: 22
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -355,11 +353,11 @@ gameObjects:
       x: 159.541794
       y: -43.554039
       z: 58.8173409
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069114804267883,"a":1.0}]}'
 - instanceID: 23
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -370,11 +368,11 @@ gameObjects:
       x: -7.1668849
       y: -27.0335503
       z: 65.6753006
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060690976679325107,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060690976679325107,"a":1.0}]}'
 - instanceID: 24
   name: Namana
   tag: Untagged
@@ -385,14 +383,14 @@ gameObjects:
       x: 0
       y: -1
       z: 0
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 1000
       y: 1
       z: 1000
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":1.0,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":1.0,"b":0.0,"a":1.0}]}'
 - instanceID: 25
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -403,11 +401,11 @@ gameObjects:
       x: 75.3081665
       y: -77.9146652
       z: 39.9862785
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 26
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -418,11 +416,11 @@ gameObjects:
       x: 28.8069897
       y: -37.0633392
       z: 132.783005
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069102883338928,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069102883338928,"a":1.0}]}'
 - instanceID: 27
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -433,11 +431,11 @@ gameObjects:
       x: 102.735703
       y: -44.7971954
       z: 0.455722004
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 28
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -448,11 +446,11 @@ gameObjects:
       x: 5.41833019
       y: -42.3972702
       z: 71.1664963
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069095432758331,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069095432758331,"a":1.0}]}'
 - instanceID: 29
   name: Cube(Clone)(Clone)
   tag: Untagged
@@ -463,11 +461,11 @@ gameObjects:
       x: -38.8840218
       y: -15.32057
       z: 77.941452
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691215097904208,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691215097904208,"a":1.0}]}'
 - instanceID: 30
   name: Cube(Clone)(Clone)(Clone)
   tag: Untagged
@@ -478,11 +476,11 @@ gameObjects:
       x: -76.4731445
       y: -5.94683218
       z: -10.7385626
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691192746162418,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691192746162418,"a":1.0}]}'
 - instanceID: 31
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -493,11 +491,11 @@ gameObjects:
       x: -36.9163704
       y: 47.0714989
       z: 45.5466843
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 32
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -508,11 +506,11 @@ gameObjects:
       x: -25.7940826
       y: 44.14674
       z: 55.0727959
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 33
   name: Cube(Clone)(Clone)(Clone)
   tag: Untagged
@@ -523,11 +521,11 @@ gameObjects:
       x: 198.481903
       y: -37.1306915
       z: 75.7533722
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691192746162418,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691192746162418,"a":1.0}]}'
 - instanceID: 34
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -538,11 +536,11 @@ gameObjects:
       x: -10.4167557
       y: 40.7727966
       z: 68.3428192
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 35
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -553,11 +551,11 @@ gameObjects:
       x: 2.40881038
       y: 38.1999207
       z: 79.1531906
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 36
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -568,11 +566,11 @@ gameObjects:
       x: 16.2345829
       y: 35.5109444
       z: 88.744957
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 37
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -583,11 +581,11 @@ gameObjects:
       x: 29.121376
       y: 32.8473587
       z: 96.1504135
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 38
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -598,11 +596,11 @@ gameObjects:
       x: 45.600811
       y: 29.70327
       z: 104.658058
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 39
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -613,11 +611,11 @@ gameObjects:
       x: 60.5273705
       y: 27.5093784
       z: 112.389503
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 40
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -628,11 +626,11 @@ gameObjects:
       x: 71.7763443
       y: 26.4213772
       z: 119.221123
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 41
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -643,11 +641,11 @@ gameObjects:
       x: 83.9437027
       y: 25.5688877
       z: 128.068314
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 42
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -658,11 +656,11 @@ gameObjects:
       x: 96.3968277
       y: 24.6420288
       z: 139.539474
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 43
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -673,11 +671,11 @@ gameObjects:
       x: 107.927963
       y: 23.560751
       z: 151.823151
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 44
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -688,11 +686,11 @@ gameObjects:
       x: 207.090195
       y: -39.6614304
       z: 112.4216
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691118240356448,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691118240356448,"a":1.0}]}'
 - instanceID: 45
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -703,11 +701,11 @@ gameObjects:
       x: 118.403328
       y: 21.795166
       z: 165.017593
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 46
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -718,11 +716,11 @@ gameObjects:
       x: 175.858429
       y: 21.625864
       z: 141.444931
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 47
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -733,11 +731,11 @@ gameObjects:
       x: 166.47818
       y: 20.4219837
       z: 127.62883
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 48
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -748,11 +746,11 @@ gameObjects:
       x: 155.983353
       y: 19.0750504
       z: 112.171043
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 49
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -763,11 +761,11 @@ gameObjects:
       x: 146.463425
       y: 17.8532391
       z: 98.1492081
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 50
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -778,11 +776,11 @@ gameObjects:
       x: 136.937424
       y: 16.6306496
       z: 84.1184311
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 51
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -793,11 +791,11 @@ gameObjects:
       x: 129.309097
       y: 15.8450232
       z: 73.3153076
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 52
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -808,11 +806,11 @@ gameObjects:
       x: 120.061707
       y: 15.3360672
       z: 61.4077339
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 53
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -823,11 +821,11 @@ gameObjects:
       x: 96.8564224
       y: 14.5931778
       z: 34.2362289
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 54
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -838,11 +836,11 @@ gameObjects:
       x: 83.2633896
       y: 14.5745039
       z: 21.1713657
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 55
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -853,11 +851,11 @@ gameObjects:
       x: 82.9307022
       y: -44.0115814
       z: 192.959595
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069100648164749,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069100648164749,"a":1.0}]}'
 - instanceID: 56
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -868,11 +866,11 @@ gameObjects:
       x: 68.4853973
       y: 15.2803516
       z: 9.57079124
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 57
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -883,11 +881,11 @@ gameObjects:
       x: 55.0424004
       y: 16.4720192
       z: -0.705404401
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 58
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -898,11 +896,11 @@ gameObjects:
       x: 42.1666832
       y: 18.4005814
       z: -11.5820618
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 59
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -913,11 +911,11 @@ gameObjects:
       x: 30.4641209
       y: 20.9445648
       z: -23.5736446
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 60
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -928,11 +926,11 @@ gameObjects:
       x: 21.9732704
       y: 22.7282352
       z: -35.8679161
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 61
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -943,11 +941,11 @@ gameObjects:
       x: 16.6430244
       y: 23.760664
       z: -49.7864456
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 62
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -958,11 +956,11 @@ gameObjects:
       x: 16.3289471
       y: 23.8968487
       z: -68.5279846
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 63
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -973,11 +971,11 @@ gameObjects:
       x: 18.3949795
       y: 23.8156033
       z: -85.3272324
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 64
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -988,11 +986,11 @@ gameObjects:
       x: -54.6771393
       y: 58.4380989
       z: 36.5351982
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069093197584152,"a":1.0}]}'
 - instanceID: 65
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1003,11 +1001,11 @@ gameObjects:
       x: 108.10553
       y: 14.8658619
       z: 46.9329491
-    rotation: *o3
-    scale: *o5
+    rotation: *o1
+    scale: *o4
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069090962409973,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.06069090962409973,"a":1.0}]}'
 - instanceID: 66
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1018,11 +1016,11 @@ gameObjects:
       x: 70.0297012
       y: -31.9855499
       z: 179.933807
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}]}'
 - instanceID: 67
   name: Cube(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1033,11 +1031,11 @@ gameObjects:
       x: 118.860298
       y: -42.3830986
       z: 16.8622608
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 68
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1048,17 +1046,17 @@ gameObjects:
       x: 25.6089802
       y: -4.68461895
       z: 27.4419498
-    rotation: &o6
+    rotation: &o5
       x: 90
       y: 135
       z: 0
-    scale: &o7
+    scale: &o6
       x: 1.00000167
-      y: 90.0000534
+      y: 90.000061
       z: 1.00000095
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 69
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1069,11 +1067,11 @@ gameObjects:
       x: 46.1147804
       y: -5.13705587
       z: 51.0279503
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 70
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1084,11 +1082,11 @@ gameObjects:
       x: 62.3250389
       y: -6.86148882
       z: 66.5598831
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 71
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1099,11 +1097,11 @@ gameObjects:
       x: 73.9183884
       y: -7.74683714
       z: 78.9175034
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 72
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1114,11 +1112,11 @@ gameObjects:
       x: 83.3084488
       y: -8.22924137
       z: 90.7171936
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 73
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1129,11 +1127,11 @@ gameObjects:
       x: 95.7168198
       y: -9.41404438
       z: 104.716202
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 74
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1144,11 +1142,11 @@ gameObjects:
       x: 107.727798
       y: -10.1491804
       z: 116.617699
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 75
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1159,11 +1157,11 @@ gameObjects:
       x: 122.771599
       y: -10.6291103
       z: 130.914093
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 76
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1174,11 +1172,11 @@ gameObjects:
       x: 133.621597
       y: -10.8636503
       z: 141.360107
-    rotation: *o6
-    scale: *o7
+    rotation: *o5
+    scale: *o6
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.5444310903549194,"g":1.0,"b":1.0,"a":1.0}]}'
 - instanceID: 77
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1189,11 +1187,11 @@ gameObjects:
       x: 57.8113899
       y: -42.518631
       z: 167.352402
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 78
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1204,11 +1202,11 @@ gameObjects:
       x: 44.2094307
       y: -38.8012695
       z: 142.385605
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691095888614658,"a":1.0}]}'
 - instanceID: 79
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1219,11 +1217,11 @@ gameObjects:
       x: 14.90341
       y: -40.7477417
       z: 126.645599
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}]}'
 - instanceID: 80
   name: Cube(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   tag: Untagged
@@ -1234,11 +1232,11 @@ gameObjects:
       x: -4.0398798
       y: -39.2744904
       z: 116.030296
-    rotation: *o3
-    scale: *o4
+    rotation: *o1
+    scale: *o3
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7249715924263,"g":0.5478410720825195,"b":0.060691073536872867,"a":1.0}]}'
 - instanceID: 81
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1249,14 +1247,14 @@ gameObjects:
       x: 79.3125305
       y: -0.25
       z: 85.4906082
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 9.78941154
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 82
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1267,17 +1265,17 @@ gameObjects:
       x: 80.0130539
       y: -0.249999955
       z: 88.8853302
-    rotation: &o8
+    rotation: &o7
       x: 0
       y: 90
       z: 0
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 4.40105534
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 83
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1288,14 +1286,14 @@ gameObjects:
       x: 80.7135849
       y: -0.25
       z: 89.6178436
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.4650321
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 84
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1306,14 +1304,14 @@ gameObjects:
       x: 83.9838409
       y: -0.249999955
       z: 90.3503647
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 9.54050732
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 85
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1324,14 +1322,14 @@ gameObjects:
       x: 18.515379
       y: -0.249999955
       z: 19.0025234
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.21257162
+      z: 5.2125721
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 86
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1342,14 +1340,14 @@ gameObjects:
       x: 87.2540894
       y: -0.249999955
       z: 91.4458542
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.19099808
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 87
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1360,14 +1358,14 @@ gameObjects:
       x: 89.759819
       y: -0.25
       z: 92.5413589
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 8.01144791
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 88
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1378,14 +1376,14 @@ gameObjects:
       x: 92.2655258
       y: -0.249999955
       z: 94.9361115
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.78950024
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 89
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1396,14 +1394,14 @@ gameObjects:
       x: 94.665184
       y: -0.249999955
       z: 97.330864
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.7993474
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 90
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1414,14 +1412,14 @@ gameObjects:
       x: 8.37769318
       y: -0.249999955
       z: 10.239356
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.38339949
+      z: 5.38339996
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 91
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1432,14 +1430,14 @@ gameObjects:
       x: 66.9241486
       y: -0.249999955
       z: 69.8760529
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 9.80030537
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 92
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1450,14 +1448,14 @@ gameObjects:
       x: 16.1087513
       y: -0.249999955
       z: 16.792408
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.60068655
+      z: 5.60068703
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 93
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1468,14 +1466,14 @@ gameObjects:
       x: 97.0648727
       y: -0.25
       z: 99.7374039
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.81308603
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 94
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1486,14 +1484,14 @@ gameObjects:
       x: 100.563843
       y: -0.25
       z: 102.143944
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 9.99793625
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 95
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1504,14 +1502,14 @@ gameObjects:
       x: 34.2914772
       y: -0.249999955
       z: 32.9328003
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.77577066
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 96
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1522,14 +1520,14 @@ gameObjects:
       x: 104.062798
       y: -0.249999955
       z: 102.843178
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.39846325
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 97
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1540,14 +1538,14 @@ gameObjects:
       x: 104.762573
       y: -0.25
       z: 103.542404
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 4.3995471
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 98
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1558,14 +1556,14 @@ gameObjects:
       x: 105.462303
       y: -0.25
       z: 106.837097
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 9.58946705
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 99
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1576,14 +1574,14 @@ gameObjects:
       x: 19.6216621
       y: -0.25
       z: 20.3023891
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.59973335
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 100
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1594,14 +1592,14 @@ gameObjects:
       x: 107.862946
       y: -0.249999955
       z: 110.131882
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.80126286
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 101
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1612,14 +1610,14 @@ gameObjects:
       x: 110.26358
       y: -0.25
       z: 111.337288
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.41082573
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 102
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1630,14 +1628,14 @@ gameObjects:
       x: 31.6825371
       y: -0.249999955
       z: 30.5449123
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 8.21788502
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 103
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1648,14 +1646,14 @@ gameObjects:
       x: 111.362083
       y: -0.249999955
       z: 112.542725
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.19699717
+      z: 5.19699764
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 104
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1666,14 +1664,14 @@ gameObjects:
       x: 53.7377357
       y: -0.25
       z: 53.8753586
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.80422401
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 105
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1684,14 +1682,14 @@ gameObjects:
       x: 112.460571
       y: -0.25
       z: 113.443512
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.80157185
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 106
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1702,14 +1700,14 @@ gameObjects:
       x: 113.665405
       y: -0.25
       z: 114.344292
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.40966082
+      z: 5.40966129
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 107
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1720,14 +1718,14 @@ gameObjects:
       x: 9.5693903
       y: -0.25
       z: 11.4386225
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.39853191
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 108
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1738,14 +1736,14 @@ gameObjects:
       x: 35.3877602
       y: -0.25
       z: 35.3206863
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.19256401
+      z: 5.19256449
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 109
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1756,14 +1754,14 @@ gameObjects:
       x: 114.870232
       y: -0.249999955
       z: 116.775612
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.8626318
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 110
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1774,14 +1772,14 @@ gameObjects:
       x: 116.03698
       y: -0.249999955
       z: 119.206924
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.33349895
+      z: 5.33349943
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 111
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1792,14 +1790,14 @@ gameObjects:
       x: 117.203743
       y: -0.249999955
       z: 120.401711
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.38957691
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 112
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1810,14 +1808,14 @@ gameObjects:
       x: 119.599342
       y: -0.25
       z: 121.596512
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.79120207
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 113
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1828,14 +1826,14 @@ gameObjects:
       x: 70.3243027
       y: -0.25
       z: 72.4790115
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 8.20590305
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 114
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1846,14 +1844,14 @@ gameObjects:
       x: 24.4015236
       y: -0.25
       z: 22.8028488
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.40118742
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 115
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1864,14 +1862,14 @@ gameObjects:
       x: 121.994934
       y: -0.25
       z: 122.808647
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.42426538
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 116
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1882,14 +1880,14 @@ gameObjects:
       x: 55.8308525
       y: -0.249999955
       z: 56.2774734
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.18626404
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 117
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1900,14 +1898,14 @@ gameObjects:
       x: 123.085945
       y: -0.25
       z: 124.020782
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.18201733
+      z: 5.1820178
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 118
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1918,14 +1916,14 @@ gameObjects:
       x: 124.176949
       y: -0.249999955
       z: 125.220352
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.3991313
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 119
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1936,14 +1934,14 @@ gameObjects:
       x: 125.27562
       y: -0.249999955
       z: 126.419914
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.19736338
+      z: 5.19736385
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 120
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1954,14 +1952,14 @@ gameObjects:
       x: 126.374313
       y: -0.25
       z: 127.619736
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.3996582
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 121
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1972,14 +1970,14 @@ gameObjects:
       x: 36.4840355
       y: -0.249999955
       z: 36.5198326
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.3982954
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 122
   name: RoadRiged(Clone)
   tag: Untagged
@@ -1990,14 +1988,14 @@ gameObjects:
       x: 127.590317
       y: -0.249999955
       z: 128.819565
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.43200016
+      z: 5.43200064
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 123
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2008,14 +2006,14 @@ gameObjects:
       x: 10.7730122
       y: -0.249999955
       z: 12.637888
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.40724754
+      z: 5.40724802
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 124
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2026,14 +2024,14 @@ gameObjects:
       x: 17.4090939
       y: -0.25
       z: 17.8974628
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.21011496
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 125
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2044,14 +2042,14 @@ gameObjects:
       x: 128.80632
       y: -0.25
       z: 129.8069
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.97462845
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 126
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2062,14 +2060,14 @@ gameObjects:
       x: 130.008347
       y: -0.249999955
       z: 130.794189
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.40407038
+      z: 5.40407085
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 127
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2080,14 +2078,14 @@ gameObjects:
       x: 131.210388
       y: -0.25
       z: 131.98819
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.38799715
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 128
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2098,14 +2096,14 @@ gameObjects:
       x: 4.97799873
       y: -0.25
       z: 4.62928247
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.39766741
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 129
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2116,14 +2114,14 @@ gameObjects:
       x: 25.6357803
       y: -0.249999955
       z: 24.0034466
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.4685154
+      z: 5.46851587
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 130
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2134,14 +2132,14 @@ gameObjects:
       x: 132.410889
       y: -0.249999955
       z: 133.182175
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.40103436
+      z: 5.40103483
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 131
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2152,14 +2150,14 @@ gameObjects:
       x: 133.61142
       y: -0.25
       z: 135.68161
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.9988513
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 132
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2170,14 +2168,14 @@ gameObjects:
       x: 134.819427
       y: -0.249999955
       z: 138.18103
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.41607332
+      z: 5.4160738
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 133
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2188,14 +2186,14 @@ gameObjects:
       x: 136.027496
       y: -0.25
       z: 139.273666
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.18527317
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 134
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2206,14 +2204,14 @@ gameObjects:
       x: 138.334167
       y: -0.249999955
       z: 140.366302
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.61340904
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 135
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2224,14 +2222,14 @@ gameObjects:
       x: 71.5239029
       y: -0.249999955
       z: 75.0819397
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.3992095
+      z: 5.39920998
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 136
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2242,14 +2240,14 @@ gameObjects:
       x: 140.6409
       y: -0.25
       z: 141.565674
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.39872503
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 137
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2260,14 +2258,14 @@ gameObjects:
       x: 141.746582
       y: -0.249999955
       z: 142.76503
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.21138573
+      z: 5.2113862
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 138
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2278,14 +2276,14 @@ gameObjects:
       x: 11.9766359
       y: -0.25
       z: 13.9479246
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.62007427
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 139
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2296,14 +2294,14 @@ gameObjects:
       x: 142.85228
       y: -0.249999955
       z: 145.169998
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.80996323
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 140
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2314,14 +2312,14 @@ gameObjects:
       x: 145.251877
       y: -0.25
       z: 147.575012
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.79919958
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 141
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2332,14 +2330,14 @@ gameObjects:
       x: 26.870039
       y: -0.25
       z: 26.1720638
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.33722782
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 142
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2350,14 +2348,14 @@ gameObjects:
       x: 147.651459
       y: -0.249999955
       z: 148.662888
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.17576933
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 143
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2368,14 +2366,14 @@ gameObjects:
       x: 148.944366
       y: -0.25
       z: 149.750778
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.58583832
+      z: 5.58583879
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 144
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2386,14 +2384,14 @@ gameObjects:
       x: 7.18599319
       y: -0.25
       z: 8.03373623
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.41123962
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 145
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2404,14 +2402,14 @@ gameObjects:
       x: 38.6864243
       y: -0.25
       z: 40.4235573
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 8.40915012
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 146
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2422,14 +2420,14 @@ gameObjects:
       x: 73.8193283
       y: -0.25
       z: 77.28582
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.19163561
+      z: 5.19163609
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 147
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2440,14 +2438,14 @@ gameObjects:
       x: 22.0115967
       y: -0.249999955
       z: 21.6022568
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.77987099
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 148
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2458,14 +2456,14 @@ gameObjects:
       x: 62.1220932
       y: -0.25
       z: 64.7795563
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 10.3939905
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 149
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2476,14 +2474,14 @@ gameObjects:
       x: 0
       y: -0.25
       z: 1.71522462
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 6.43044949
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 150
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2494,14 +2492,14 @@ gameObjects:
       x: 13.3925228
       y: -0.249999955
       z: 15.2579622
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.83177519
+      z: 5.83177567
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 151
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2512,14 +2510,14 @@ gameObjects:
       x: 14.8084078
       y: -0.25
       z: 16.0251846
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.53444481
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 152
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2530,14 +2528,14 @@ gameObjects:
       x: 27.9718208
       y: -0.25
       z: 28.3406734
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.20356464
+      z: 5.20356512
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 153
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2548,14 +2546,14 @@ gameObjects:
       x: 29.0736008
       y: -0.25
       z: 29.442791
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 5.20423698
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 154
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2566,14 +2564,14 @@ gameObjects:
       x: 57.9239922
       y: -0.25
       z: 58.6800232
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.80509567
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 155
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2589,12 +2587,12 @@ gameObjects:
       y: 44.5141449
       z: 0
     scale:
-      x: 2.99999976
+      x: 3.00000024
       y: 55.1022415
-      z: 89.496315
+      z: 89.4963226
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 156
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2605,14 +2603,14 @@ gameObjects:
       x: 44.0023003
       y: -0.249999955
       z: 50.272686
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 4.45974493
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 157
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2623,14 +2621,14 @@ gameObjects:
       x: 6.08199692
       y: -0.25
       z: 5.82811642
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.20799685
+      z: 5.20799732
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 158
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2641,14 +2639,14 @@ gameObjects:
       x: 44.7321663
       y: -0.25
       z: 50.8729706
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.20056772
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 159
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2659,14 +2657,14 @@ gameObjects:
       x: 2.48899889
       y: -0.25
       z: 3.43044901
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.97800684
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 160
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2677,14 +2675,14 @@ gameObjects:
       x: 62.8230438
       y: -0.25
       z: 68.4765625
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 4.40190411
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 161
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2695,14 +2693,14 @@ gameObjects:
       x: 63.5239944
       y: -0.249999955
       z: 69.1763
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 4.3994832
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 162
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2718,12 +2716,12 @@ gameObjects:
       y: 359.345306
       z: 359.726501
     scale:
-      x: 2.99999881
-      y: 0.499999911
-      z: 5.20387602
+      x: 2.99999905
+      y: 0.499999881
+      z: 5.20387506
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 163
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2734,14 +2732,14 @@ gameObjects:
       x: 40.9794235
       y: -0.249999955
       z: 43.1281242
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.58600998
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 164
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2752,14 +2750,14 @@ gameObjects:
       x: 37.5852318
       y: -0.249999955
       z: 37.7189865
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 5.20239544
+      z: 5.20239592
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 165
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2770,14 +2768,14 @@ gameObjects:
       x: 43.2724304
       y: -0.249999955
       z: 46.7004013
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 10.144556
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 166
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2788,14 +2786,14 @@ gameObjects:
       x: 49.2349548
       y: -0.249999955
       z: 51.4732513
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
-      z: 12.0055857
+      z: 12.0055847
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 167
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2806,14 +2804,14 @@ gameObjects:
       x: 60.0230484
       y: -0.25
       z: 61.0825615
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.19811678
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 168
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2824,14 +2822,14 @@ gameObjects:
       x: 74.9151382
       y: -0.25
       z: 79.6908875
-    rotation: *o3
+    rotation: *o1
     scale:
       x: 3
       y: 0.5
       z: 7.81010628
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 169
   name: RoadRiged(Clone)
   tag: Untagged
@@ -2842,14 +2840,14 @@ gameObjects:
       x: 77.1138382
       y: -0.25
       z: 82.0959167
-    rotation: *o8
+    rotation: *o7
     scale:
-      x: 3.00000405
+      x: 3.00000381
       y: 0.5
       z: 7.39741039
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6077370047569275,"g":0.5924454927444458,"b":0.0,"a":1.0}]}'
 - instanceID: 179
   name: Trigger
   tag: Untagged
@@ -2859,14 +2857,14 @@ gameObjects:
       x: 152.333099
       y: 0.501142502
       z: 149.976501
-    rotation: *o9
-    scale: &o10
+    rotation: *o8
+    scale: &o9
       x: 15
       y: 1
       z: 1
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0117647061124444,"g":0.2705882489681244,"b":0.9882352948188782,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0117647061124444,"g":0.2705882489681244,"b":0.9882352948188782,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":16,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 180
@@ -2878,14 +2876,14 @@ gameObjects:
       x: 38.5063095
       y: 0.5
       z: 39.1638298
-    rotation: &o11
+    rotation: &o10
       x: 0
       y: 44.9999962
       z: 0
-    scale: *o10
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.6509804129600525,"b":1.0,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.6509804129600525,"b":1.0,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":7,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":0.0,"y":-50.0,"z":0.0},"MRSEaseAnimation":6,"MRSTargetObject":24,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":5.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 181
@@ -2897,11 +2895,11 @@ gameObjects:
       x: 0.808622777
       y: 0.500000119
       z: 1.72824299
-    rotation: *o11
-    scale: *o10
+    rotation: *o10
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.6274510025978088,"g":0.8705882430076599,"b":0.800000011920929,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.6274510025978088,"g":0.8705882430076599,"b":0.800000011920929,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":12,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":90.0,"targetBlock2":0.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 182
@@ -2913,11 +2911,11 @@ gameObjects:
       x: 113.4552
       y: 0.645644724
       z: 114.246101
-    rotation: *o9
-    scale: *o10
+    rotation: *o8
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":30.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 183
@@ -2929,11 +2927,11 @@ gameObjects:
       x: 19.8071709
       y: 0.645644724
       z: 19.9880409
-    rotation: *o11
-    scale: *o10
+    rotation: *o10
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":30.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 184
@@ -2945,11 +2943,11 @@ gameObjects:
       x: 38.2550507
       y: 0.645644724
       z: 39.1038704
-    rotation: *o11
-    scale: *o10
+    rotation: *o10
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":0,"TargetAngleRotation":{"x":30.0,"y":-45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":45.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":2.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 185
@@ -2961,11 +2959,11 @@ gameObjects:
       x: 57.1928406
       y: 0.645644724
       z: 58.8629417
-    rotation: *o9
-    scale: *o10
+    rotation: *o8
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":0,"TargetAngleRotation":{"x":30.0,"y":-60.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":45.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 186
@@ -2977,11 +2975,11 @@ gameObjects:
       x: 74.9535065
       y: 0.645644724
       z: 78.5150681
-    rotation: *o9
-    scale: *o10
+    rotation: *o8
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":-30.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":45.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
 - instanceID: 187
@@ -2993,10 +2991,10 @@ gameObjects:
       x: 92.9003372
       y: 0.645644724
       z: 97.9914169
-    rotation: *o9
-    scale: *o10
+    rotation: *o8
+    scale: *o9
   components:
   - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
-    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[],"materials":[{"shaderIndex":0,"color":{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}},{"shaderIndex":0,"color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}]}'
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0},{"r":0.0,"g":0.0,"b":0.0,"a":0.0}]}'
   - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
     data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":-10.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":30.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'

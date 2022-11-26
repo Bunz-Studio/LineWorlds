@@ -1,0 +1,1892 @@
+info:
+  levelName: SNOOZE
+  description: A level
+  authorName: Bunzhida
+  musicName: snooze
+  musicArtist: wotaku
+  musicFile: audio.ogg
+  levelID: 4333390
+  authorID: 0
+  levelVersion: 1
+  gameVersion: LW0.7
+renderSettings:
+  backgroundColor: &o0
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  fog: false
+  fogDensity: 0.0299999993
+  fogColor: *o0
+lineInfo:
+  instanceID: 1
+  name: Player
+  tag: Player
+  groupIDs: []
+  transform:
+    position: &o1
+      x: 0
+      y: 1
+      z: 0
+    rotation: &o4
+      x: 0
+      y: 90
+      z: 0
+    scale: &o2
+      x: 1
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedLine
+    data: '{"lineSpeed":12.0}'
+cameraInfo:
+  instanceID: 2
+  name: RuntimeCamera
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: *o1
+    rotation:
+      x: 45.0000038
+      y: 60.0000038
+      z: 0
+    scale: *o2
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedCamera
+    data: '{"rotation":{"x":45.0,"y":60.0,"z":0.0},"offset":{"x":0.0,"y":0.0,"z":0.0},"distance":20.0,"SmoothTime":1.0,"SmoothFactor":1.0,"needtime":1.0}'
+gameObjects:
+- instanceID: 2
+  name: WideGround
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: &o3
+      x: 0
+      y: 0
+      z: 0
+    rotation: *o3
+    scale: *o2
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 3
+  name: Cube
+  tag: Untagged
+  groupIDs: &o5
+  - 1
+  transform:
+    position:
+      x: 3.51806593
+      y: 1.19209304E-07
+      z: -4.19386197E-07
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 10.0361414
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 4
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 7.03613281
+      y: 0
+      z: 2.26698995
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.53398323
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 5
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 8.21781731
+      y: 1.1920929E-07
+      z: 4.53398132
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.36337709
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 6
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 9.3995018
+      y: 0
+      z: 5.53462362
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.0012846
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 7
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 11.2572174
+      y: 1.1920929E-07
+      z: 6.53526592
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 6.71544266
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 8
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 13.1149282
+      y: 0
+      z: 8.55216694
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.03380442
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 9
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 15.45469
+      y: 1.1920929E-07
+      z: 10.5690727
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 7.67954254
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 10
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 17.7944565
+      y: 0
+      z: 11.8321476
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.52614737
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 11
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 21.2598858
+      y: 1.1920929E-07
+      z: 13.0952206
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 9.93087482
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 12
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 24.7253113
+      y: 0
+      z: 15.3843327
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.57822895
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 13
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 25.9896526
+      y: 1.1920929E-07
+      z: 17.6734447
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.52869511
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 14
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 27.2540035
+      y: 0
+      z: 18.6938095
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.04073191
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 15
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 28.4726677
+      y: 1.1920929E-07
+      z: 19.7141743
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.43733931
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 16
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 29.6913338
+      y: 0
+      z: 20.957756
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.48715734
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 17
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 30.9892139
+      y: 1.1920929E-07
+      z: 22.2013302
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.59576893
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 18
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 32.2870941
+      y: 0
+      z: 24.5154381
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.6282258
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 19
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 33.4258461
+      y: 1.1920929E-07
+      z: 26.8295555
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.2775135
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 20
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 34.5645943
+      y: 0
+      z: 29.3174114
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.97571325
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 21
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 35.8214302
+      y: 1.1920929E-07
+      z: 31.8052673
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.51368427
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 22
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 37.07827
+      y: 0
+      z: 32.9925385
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.37454605
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 23
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 38.3215332
+      y: 1.1920929E-07
+      z: 34.1798172
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.48654652
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 24
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 39.5648155
+      y: 0
+      z: 35.3635292
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.36741829
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 25
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 43.1889687
+      y: 1.1920929E-07
+      z: 36.5472374
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 10.248312
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 26
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 46.813118
+      y: 0
+      z: 38.9922447
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.89001989
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 27
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 47.9352074
+      y: 1.1920929E-07
+      z: 41.4372673
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.24418068
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 28
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 49.0572929
+      y: 0
+      z: 42.711937
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.54932451
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 29
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 50.8177452
+      y: 1.1920929E-07
+      z: 43.9865875
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 6.52090788
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 30
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 52.5781822
+      y: 0
+      z: 45.8399849
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 6.70678568
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 31
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 54.9321442
+      y: 1.1920929E-07
+      z: 47.6933708
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 7.70794344
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 32
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 57.2861137
+      y: 0
+      z: 48.9173241
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.44789791
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 33
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 60.7379532
+      y: 1.1920929E-07
+      z: 50.1412697
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 9.90368462
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 34
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 64.1897812
+      y: 0
+      z: 52.7300072
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 8.17748642
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 35
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 65.2552338
+      y: 1.1920929E-07
+      z: 55.3187523
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.1308918
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 36
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 66.3206558
+      y: 0
+      z: 56.4855156
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.33352947
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 37
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 67.5905991
+      y: 1.1920929E-07
+      z: 57.6522865
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.53988504
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 38
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 68.8605347
+      y: 0
+      z: 58.7737274
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.24287081
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 39
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 71.1700211
+      y: 1.1920929E-07
+      z: 59.895153
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 7.61902809
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 40
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 73.4795532
+      y: 0
+      z: 61.1004372
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 5.4105711
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 41
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 74.7378845
+      y: 1.1920929E-07
+      z: 62.3057251
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.51664543
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 42
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 75.9961624
+      y: 0
+      z: 66.836853
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 12.0622978
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 43
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 77.2610474
+      y: 1.1920929E-07
+      z: 71.3680038
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 5.52977896
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 44
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 78.5259399
+      y: 0
+      z: 74.0341721
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 8.33229351
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 45
+  name: Cube
+  tag: Untagged
+  groupIDs: *o5
+  transform:
+    position:
+      x: 80.9354248
+      y: 1.1920929E-07
+      z: 76.7002945
+    rotation: *o4
+    scale:
+      x: 3.00000763
+      y: 1
+      z: 7.81898355
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 46
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 69.5942383
+      y: 0.999999225
+      z: 60.2909203
+    rotation: &o9
+      x: 0
+      y: 45.0000038
+      z: 0
+    scale: &o6
+      x: 15
+      y: 1
+      z: 1
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.3529411852359772,"g":1.0,"b":0.7843137383460999,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":4,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 47
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 69.5420303
+      y: 1.00000405
+      z: 60.7754593
+    rotation: &o7
+      x: 0
+      y: 44.9999962
+      z: 0
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7843137383460999,"g":0.7843137383460999,"b":0.19607843458652497,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":3,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"FogTime":1.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 48
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 69.4310226
+      y: 0.999997079
+      z: 60.2947884
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.21176470816135407,"b":0.6980392336845398,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":14,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":1.0,"ColorTarget":1,"ColorUseGroup":false,"ColorGroup":[1],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 49
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 69.5353088
+      y: 0.999998927
+      z: 60.5928116
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.21176470816135407,"b":0.6980392336845398,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":14,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":1.0,"ColorTarget":-1,"ColorUseGroup":true,"ColorGroup":[1],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 50
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: &o8
+      x: 46.6695709
+      y: 1
+      z: 37.8090286
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.21176470816135407,"b":0.6980392336845398,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":14,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":0.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.30000001192092898,"ColorTarget":1,"ColorUseGroup":false,"ColorGroup":[1],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 51
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position: *o8
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.21176470816135407,"b":0.6980392336845398,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":14,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":0.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.30000001192092898,"ColorTarget":-1,"ColorUseGroup":true,"ColorGroup":[1],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 52
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 45.6918983
+      y: 1
+      z: 38.3006706
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.729411780834198,"b":0.19607843458652497,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":0,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":40.0,"TargetSmoothing":256.0,"TargetRotationSmoothing":0.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 53
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 2.50490499
+      y: 0.999999523
+      z: -0.2370397
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.7843137383460999,"g":0.7843137383460999,"b":0.19607843458652497,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":3,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":0.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":0.30000001192092898,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 54
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 2.7775321
+      y: 0.999999523
+      z: -0.686108828
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.21176470816135407,"b":0.6980392336845398,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":14,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":0.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.30000001192092898,"ColorTarget":-1,"ColorUseGroup":true,"ColorGroup":[1],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 55
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 2.36566806
+      y: 0.999999523
+      z: -0.159807205
+    rotation: *o9
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.3529411852359772,"g":1.0,"b":0.7843137383460999,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":4,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":0.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":0.30000001192092898,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 56
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 2.91991711
+      y: 0.999999523
+      z: -0.713212192
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":0.21176470816135407,"b":0.6980392336845398,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":14,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":10.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":0.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.30000001192092898,"ColorTarget":1,"ColorUseGroup":false,"ColorGroup":[1],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 57
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 31.9383106
+      y: -6.95902205
+      z: -2.36834407
+    rotation: *o9
+    scale: &o10
+      x: 0.199999988
+      y: 0.200000003
+      z: 899.999878
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 58
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 35.7419281
+      y: -6.9590168
+      z: -17.5840397
+    rotation: *o9
+    scale: *o10
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 59
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 4.48877907
+      y: -6.95901299
+      z: 25.8770409
+    rotation: *o9
+    scale: *o10
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 60
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 21.5677204
+      y: -6.95902491
+      z: 5.04172611
+    rotation: *o9
+    scale: *o10
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 61
+  name: Cube
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 11.1171103
+      y: -6.95902491
+      z: 17.8214493
+    rotation: *o9
+    scale: *o10
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}]}'
+- instanceID: 63
+  name: Trigger
+  tag: Untagged
+  groupIDs: []
+  transform:
+    position:
+      x: 84.1915436
+      y: 0.999999881
+      z: 77.8068314
+    rotation: *o7
+    scale: *o6
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0784313753247261,"b":0.0784313753247261,"a":1.0}]}'
+  - fullName: ExternMaker.Serialization.Serializables+SerializedTrigger
+    data: '{"type":2,"TargetAngleRotation":{"x":45.0,"y":45.0,"z":0.0},"TargetPivotOffset":{"x":5.0,"y":0.0,"z":5.0},"TargetCamDistance":20.0,"TargetSmoothing":1.0,"TargetRotationSmoothing":1.0,"TargetFactor":1.0,"ChangeTargetObject":false,"TargetObjectToSee":-1,"HighJump":500.0,"TargetSpeed":22.0,"DensityTo":0.009999999776482582,"ColorTo":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"FogTime":5.0,"camBG_Color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"camBG_Time":1.0,"Duration":1.0,"ShakeDuration":0.30000001192092898,"ShakeStrength":1.0,"MRSTargetVector":{"x":1.0,"y":1.0,"z":1.0},"MRSEaseAnimation":0,"MRSTargetObject":-1,"MRSisUseGroup":false,"MRSTargetGroup":[],"MRSTargetTime":1.0,"TLPTargetObject":-1,"ActivateTargetGroup":[],"targetBlock1":0.0,"targetBlock2":90.0,"targetFOV":60.0,"FOVTime":1.0,"FOVAnimation":0,"ColorTime":0.0,"ColorTarget":-1,"ColorUseGroup":false,"ColorGroup":[],"ColorAnimation":0,"targetObjectName":""}'
+- instanceID: 65
+  name: Ground
+  tag: Untagged
+  groupIDs:
+  - 1
+  transform:
+    position:
+      x: 83.5593338
+      y: -9.5263567
+      z: 106.573799
+    rotation: *o3
+    scale: &o12
+      x: 3
+      y: 1
+      z: 3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 66
+  name: Ground
+  tag: Untagged
+  groupIDs:
+  - 1
+  transform:
+    position:
+      x: 83.5593338
+      y: -9.5263567
+      z: 157.181396
+    rotation: *o3
+    scale: &o11
+      x: 3
+      y: 1
+      z: 100
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 67
+  name: Ground
+  tag: Untagged
+  groupIDs:
+  - 1
+  transform:
+    position:
+      x: 83.5593338
+      y: -30.4431305
+      z: 301.133514
+    rotation: *o3
+    scale: *o11
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 69
+  name: Ground
+  tag: Untagged
+  groupIDs:
+  - 1
+  transform:
+    position:
+      x: 83.5593338
+      y: -40.7020607
+      z: 383.747009
+    rotation: *o3
+    scale: *o12
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 70
+  name: Ground
+  tag: Untagged
+  groupIDs:
+  - 1
+  transform:
+    position:
+      x: 141.574493
+      y: -41.2848015
+      z: 383.747009
+    rotation: *o3
+    scale:
+      x: 100
+      y: 1
+      z: 3
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 74
+  name: Cube
+  tag: Untagged
+  groupIDs: &o13 []
+  transform:
+    position:
+      x: 155.013763
+      y: -41.2848206
+      z: 383.895569
+    rotation: *o4
+    scale:
+      x: 3.00000191
+      y: 1
+      z: 127.035866
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 75
+  name: Cube
+  tag: Untagged
+  groupIDs: *o13
+  transform:
+    position:
+      x: 217.031693
+      y: -41.2848206
+      z: 388.242493
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 11.6936169
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 76
+  name: Cube
+  tag: Untagged
+  groupIDs: *o13
+  transform:
+    position:
+      x: 221.407867
+      y: -41.2848206
+      z: 392.58905
+    rotation: *o4
+    scale:
+      x: 3.00000191
+      y: 1
+      z: 11.7523537
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 77
+  name: Cube
+  tag: Untagged
+  groupIDs: &o14
+  - 1
+  transform:
+    position:
+      x: 225.169403
+      y: -41.2848206
+      z: 409.998932
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 37.7474365
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 78
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 228.111557
+      y: -41.2848206
+      z: 427.372711
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 8.88428879
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 79
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 231.053696
+      y: -41.2848206
+      z: 433.220917
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 14.69631
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 80
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 234.254868
+      y: -41.2848206
+      z: 439.06897
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 9.40229321
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 81
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 237.456009
+      y: -41.2848206
+      z: 444.744507
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 14.350997
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 82
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 240.518021
+      y: -41.2848206
+      z: 450.419891
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 9.12405682
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 83
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 243.580032
+      y: -41.2848206
+      z: 454.18927
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 10.5388098
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 84
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 245.603378
+      y: -41.2848206
+      z: 457.958679
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.04669142
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 85
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 247.62674
+      y: -41.2848206
+      z: 460.12323
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.32900476
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 86
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 249.854095
+      y: -41.2848206
+      z: 462.28772
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.4546895
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 87
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 252.081421
+      y: -41.2848206
+      z: 464.342163
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.10895109
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 88
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 254.402344
+      y: -41.2848206
+      z: 466.396667
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.64183331
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 89
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 256.723297
+      y: -41.2848206
+      z: 469.529449
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 9.26547813
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 90
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 260.06366
+      y: -41.2848206
+      z: 472.66214
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 9.68065643
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 91
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 263.403961
+      y: -41.2848206
+      z: 474.78479
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.24536657
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 92
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 265.637573
+      y: -41.2848206
+      z: 476.907532
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.46731186
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 93
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 267.871246
+      y: -41.2848206
+      z: 483.157623
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 15.5003796
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 94
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 272.543823
+      y: -41.2848206
+      z: 489.40799
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 12.3451147
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 95
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 277.21637
+      y: -41.2848206
+      z: 491.41272
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.00942278
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 96
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 279.565338
+      y: -41.2848206
+      z: 493.417389
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.69799852
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 97
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 281.914429
+      y: -41.2848206
+      z: 496.658081
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 9.48135757
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 98
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 285.314484
+      y: -41.2848206
+      z: 499.898773
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 9.79998016
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 99
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 288.714386
+      y: -41.2848206
+      z: 504.398438
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 11.9991293
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 100
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 291.134155
+      y: -41.2848206
+      z: 508.897888
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.83952761
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 101
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 293.553894
+      y: -41.2848206
+      z: 514.978455
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 15.1612558
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 102
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 295.924835
+      y: -41.2848206
+      z: 521.059021
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.7420187
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 103
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 298.295959
+      y: -41.2848206
+      z: 523.433472
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.74874258
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 104
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 300.431
+      y: -41.2848206
+      z: 525.807739
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.27005339
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 105
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 302.565918
+      y: -41.2848206
+      z: 528.035339
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.45528555
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 106
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 304.786011
+      y: -41.2848206
+      z: 530.263062
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.44029617
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 107
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 307.006226
+      y: -41.2848206
+      z: 532.594788
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.66351604
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 108
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 309.313385
+      y: -41.2848206
+      z: 534.926697
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.61424065
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 109
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 311.620483
+      y: -41.2848206
+      z: 537.104431
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.35549164
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 110
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 313.891144
+      y: -41.2848206
+      z: 539.282227
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.54131556
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 111
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 316.161835
+      y: -41.2848206
+      z: 541.41925
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.27412415
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 112
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 320.110931
+      y: -41.2848206
+      z: 543.556396
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 10.8982086
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 113
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 324.059998
+      y: -41.2848206
+      z: 545.84259
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.57241583
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 114
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 326.426178
+      y: -41.2848206
+      z: 548.128845
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.73225355
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 115
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 328.792206
+      y: -41.2848206
+      z: 550.369934
+    rotation: *o3
+    scale:
+      x: 3
+      y: 1
+      z: 7.48215437
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
+- instanceID: 116
+  name: Cube
+  tag: Untagged
+  groupIDs: *o14
+  transform:
+    position:
+      x: 331.208069
+      y: -41.2848206
+      z: 552.611023
+    rotation: *o4
+    scale:
+      x: 3
+      y: 1
+      z: 7.83176851
+  components:
+  - fullName: ExternMaker.Serialization.Serializables+SerializedMesh
+    data: '{"isCustom":false,"meshInstanceID":0,"meshResource":"","meshColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"meshColors":[{"r":0.0,"g":0.0,"b":0.0,"a":1.0}]}'
